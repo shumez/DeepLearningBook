@@ -10,16 +10,16 @@
 
 # Deep Learning Book
 
-[![cover](https://mitpress.mit.edu/sites/default/files/styles/large_book_cover/http/mitp-content-server.mit.edu%3A18180/books/covers/cover/%3Fcollid%3Dbooks_covers_0%26isbn%3D9780262035613?itok=cQkCmE4S)][img]
+[![cover](https://images-na.ssl-images-amazon.com/images/I/61fim5QqaqL._SX373_BO1,204,203,200_.jpg)][img]
 
 
 ```
 @book{Goodfellow-et-al-2016,
-    title 		= 	{Deep Learning},
+    title 		=	{Deep Learning},
     author 		=	{Ian Goodfellow and Yoshua Bengio and Aaron Courville},
     publisher	=	{MIT Press},
-    note 		=	{\url{http://www.deeplearningbook.org}},
-    year 		=	{2016}
+    note		=	{\url{http://www.deeplearningbook.org}},
+    year		=	{2016}
 }
 ```
 
