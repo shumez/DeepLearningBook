@@ -14,9 +14,9 @@
 
 ### 0
 
-- 1 Introduction
-    - 1.1 Who Should Read This Book?
-    - 1.2 Historical Trends in Deep Learning
+- [1 Introduction]()
+    - [1.1 Who Should Read This Book?]()
+    - [1.2 Historical Trends in Deep Learning]()
 
 
 ### I Applied Math and Machine Learning Basics
