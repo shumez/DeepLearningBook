@@ -1,7 +1,7 @@
 <!--
 @Author: shumez
 @Date:   2018-07-05 13:44:67
-@Project: deeplearningbook
+@Project:  deeplearningbook
 @Filename: README.md
 @Last modified by:   shumez
 @Last modified time: 2018-07-05 13:48:94

@@ -1,16 +1,17 @@
 <!--
 @Author: shumez
 @Date:   2018-05-23 13:54:05
-@Project:
+@Project:  deeplearningbook
 @Filename: README.md
 @Last modified by:   shumez
 @Last modified time: 2018-05-24 13:36:84
 -->
 
 
-#
+# Chapter 01
 
-[![cover](img/)][img]
+[![cover](https://images-na.ssl-images-amazon.com/images/I/61fim5QqaqL._SX373_BO1,204,203,200_.jpg)][img]
+<!--[![cover](img/)][img]-->
 
 
 [docs] / [DOCS.md]
