@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook
 Author: 	shumez <https://github.com/shumez>
 Created: 	2018-07-06 13:36:3
-Modified: 	2019-05-30 20:06:6
+Modified: 	2019-05-30 20:31:32
 -----
 Copyright (c) 2019 shumez
 -->
@@ -209,6 +209,24 @@ Copyright (c) 2019 shumez
 <!-- toc -->
 [01]: 01/
 [02]: 02/
+[03]: 03/
+[04]: 04/
+[05]: 05/
+[06]: 06/
+[07]: 07/
+[08]: 08/
+[09]: 09/
+[10]: 10/
+[11]: 11/
+[12]: 12/
+[13]: 13/
+[14]: 14/
+[15]: 15/
+[16]: 16/
+[17]: 17/
+[18]: 18/
+[19]: 19/
+[20]: 20/
 
 <!-- fig -->
 [cover]: https://images-na.ssl-images-amazon.com/images/I/61fim5QqaqL._SX373_BO1,204,203,200_.jpg
