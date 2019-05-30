@@ -1,12 +1,12 @@
 <!--
-@Author: shumez
-@Date:   2018-07-06 13:36:38
-@Project: deeplearningbook
-@Filename: DOC.md
-@Last modified by:   shumez
-@Last modified time: 2018-07-06 13:55:88
+Filename: 	DOC.md
+Project: 	/Users/shume/Developer/DeepLearningBook
+Author: 	shumez <https://github.com/shumez>
+Created: 	2018-07-06 13:36:3
+Modified: 	2019-05-30 18:06:15
+-----
+Copyright (c) 2019 shumez
 -->
-
 
 # docs
 
