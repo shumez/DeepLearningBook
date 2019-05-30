@@ -8,9 +8,8 @@
   <meta name="description" content="None">
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>02.  - Deep Learning Book</title>
+  <title>02. Linear Algebra - Deep Learning Book</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
-  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
@@ -18,7 +17,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "02. ";
+    var mkdocs_page_name = "02. Linear Algebra";
     var mkdocs_page_input_path = "02/index.md";
     var mkdocs_page_url = "/02/";
   </script>
@@ -46,49 +45,40 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="tocbase current">
-    
-    
-      
-
-
-  <li class="navtree toctree-l1 inactive">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
     <a class="" href="..">Home</a>
-  </li>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../01/">01. Introduction</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">02. Linear Algebra</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#contents">Contents</a></li>
     
-      
 
-
-  <li class="navtree toctree-l1 inactive">
-    <a class="" href="../01/">01. </a>
-  </li>
+    <li class="toctree-l2"><a href="#0201_scalars_vectors_matrices_and_tensors">02.01. Scalars, Vectors, Matrices and Tensors</a></li>
     
-      
 
-
-  
+    <li class="toctree-l2"><a href="#0202_multiplying_matrices_and_vectors">02.02. Multiplying Matrices and Vectors</a></li>
     
-    <li class="navtree toctree-l1 page current">
-      <a class="current" href="./">
-        02. 
-      </a>
-    </li>
+
+    <li class="toctree-l2"><a href="#0203_identity_and_inverse_matrices">02.03. Identity and Inverse Matrices</a></li>
     
-      
 
-  <li class="toctree-l1 current with-children">
-    <a href="#contents">
-      Contents
-      <span class="toctree-expand"></span>
-    </a>
-  </li>
-
-
-
-
-  
-    
-  </ul>
+    </ul>
+	    </li>
+          
+        </ul>
       </div>
       &nbsp;
     </nav>
@@ -110,7 +100,7 @@
     
       
     
-    <li>02. </li>
+    <li>02. Linear Algebra</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -125,21 +115,30 @@ Filename:   note.md
 Project:    /Users/shume/Developer/DeepLearningBook/02
 Author:     shumez <https://github.com/shumez>
 Created:    2019-05-30 18:20:7
-Modified:   2019-05-30 18:21:27
+Modified:   2019-05-30 20:21:28
 -----
 Copyright (c) 2019 shumez
 -->
 
-<h1 id="02_linear_algebra">02. Linear Algebra<a class="headerlink" href="#02_linear_algebra" title="Permanent link">&para;</a></h1>
+<h1 id="02_linear_algebra"><a href="https://www.deeplearningbook.org/contents/linear_algebra.html">02. Linear Algebra</a><a class="headerlink" href="#02_linear_algebra" title="Permanent link">&para;</a></h1>
 <h2 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="#"></a><ul>
-<li><a href="#"></a></li>
+<li><a href="#0201_scalars_vectors_matrices_and_tensors">02.01. Scalars, Vectors, Matrices and Tensors</a></li>
+<li><a href="#0202_multiplying_matrices_and_vectors">02.02. Multiplying Matrices and Vectors</a></li>
+<li><a href="#0203_identity_and_inverse_matrices">02.03. Identity and Inverse Matrices</a></li>
 </ul>
+<h2 id="0201_scalars_vectors_matrices_and_tensors">02.01. Scalars, Vectors, Matrices and Tensors<a class="headerlink" href="#0201_scalars_vectors_matrices_and_tensors" title="Permanent link">&para;</a></h2>
+<ul>
+<li>scalars</li>
+<li>vectors</li>
+<li>matrices: <script type="math/tex">\mathbf{A}</script>
+</li>
+<li>tensors: <script type="math/tex">\mathsf{A}_{i, j, k}</script>
 </li>
 </ul>
+<h2 id="0202_multiplying_matrices_and_vectors">02.02. Multiplying Matrices and Vectors<a class="headerlink" href="#0202_multiplying_matrices_and_vectors" title="Permanent link">&para;</a></h2>
+<h2 id="0203_identity_and_inverse_matrices">02.03. Identity and Inverse Matrices<a class="headerlink" href="#0203_identity_and_inverse_matrices" title="Permanent link">&para;</a></h2>
 <h2 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<h2 id="_2"><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <!-- toc -->
 
 <!-- ref -->
@@ -159,7 +158,7 @@ Copyright (c) 2019 shumez
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="../01/" class="btn btn-neutral" title="01. "><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../01/" class="btn btn-neutral" title="01. Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -204,5 +203,5 @@ Copyright (c) 2019 shumez
 
 <!--
 MkDocs version : 1.0.2
-Build Date UTC : 2019-05-30 09:23:21
+Build Date UTC : 2019-05-30 11:26:11
 -->
