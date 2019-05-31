@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/01
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:19:8
-Modified: 	2019-05-31 20:49:39
+Modified: 	2019-05-31 20:56:51
 -----
 Copyright (c) 2019 shumez
 -->
@@ -50,6 +50,10 @@ ancient Greece
 **artificial neural networks** (ANNs)
 
 \(f(\mathbf{x}, \mathbf{w}) = x_1 x_1 + \cdots + x_n w_n\)
+
+**McCulloch-Pitts Neuron** ([McCulloch, Pitts, 1943][1943_Pitts_McCulloch])
+
+perceptron ([Rosenblatt, 1958][1958_Rosenblatt], [1962][1962_Rosenblatt])
 
 ### 01.02.02. Increasing Dataset Sizes
 
