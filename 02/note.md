@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:20:7
-Modified: 	2019-06-01 20:24:23
+Modified: 	2019-06-01 20:27:12
 -----
 Copyright (c) 2019 shumez
 -->
@@ -196,6 +196,10 @@ where \(\theta\) is angle between \(\mathbf{x}\), \(\mathbf{y}\)
 
 
 ## 02.06. Special Kinds of Matricesand Vectors
+
+**diagonal** \(\mathbf{D}\)  
+if and only if \(D_{i,j}=0\) for all \(i \ne j\)
+
 
 
 ## 02.07. Eigendecomposition
