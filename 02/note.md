@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:20:7
-Modified: 	2019-06-01 16:50:5
+Modified: 	2019-06-01 17:56:24
 -----
 Copyright (c) 2019 shumez
 -->
@@ -133,6 +133,29 @@ where \(\mathbf{A} \in \mathbb{R}^{m \times n}\), \(\mathbf{b} \in \mathbb{R}^m\
 
 ## 02.04. Linear Dependence and Span
 
+in order for \(\mathbf{A}^{-1}\) to exist
+
+\[ \mathbf{Ax} = \mathbf{b} \tag{2.11} \]
+
+eq.2.11 must have one solution
+
+possible to have no solution / infinitely many solutions  
+**NOT** possible to have more than 1 but less than infinitely solutions
+
+if both \(\mathbf{x}\) and \(\mathbf{y}\) are solutions then
+
+\[ \mathbf{z} = \alpha \mathbf{x} + (1 - \alpha) \mathbf{y} \tag{2.26} \]
+
+is also solution for any real \(\alpha\)
+
+**origin**
+
+\[ \mathbf{Ax} = \sum_i{x_i \mathbf{A}_{:,i}} \tag{2.27} \]
+
+**linear combination**
+
+
+\[ \sum_i{c_i \mathbf{v}^{(i)}} \tag{2.28} \]
 
 
 ## 02.05. Norms
