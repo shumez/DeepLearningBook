@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:20:7
-Modified: 	2019-06-01 18:04:57
+Modified: 	2019-06-01 19:41:20
 -----
 Copyright (c) 2019 shumez
 -->
@@ -152,9 +152,13 @@ is also solution for any real \(\alpha\)
 
 **linear combination**
 
+\(\{ \mathbf{v}^{(1)}, \cdots, \mathbf{v}^{(n)} \}\)
+
 \[ \sum_i{c_i \mathbf{v}^{(i)}} \tag{2.28} \]
 
 **span** 
+
+\(\mathbf{Ax} = \mathbf{b}\) have solution for all vals of \(\mathbf{b} \in \mathbb{R}^m\)
 
 
 ## 02.05. Norms
