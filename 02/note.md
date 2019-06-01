@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:20:7
-Modified: 	2019-06-01 16:34:0
+Modified: 	2019-06-01 16:50:5
 -----
 Copyright (c) 2019 shumez
 -->
@@ -81,8 +81,9 @@ def transposition
 \[ \mathbf{C} = \mathbf{AB} \tag{2.4} \]
 \[ C_{i,j} = \sum_k{A_{i,k} B_{k,j}} \tag{2.5} \]
 
-**element-wise product** (aka, **Hadamard product**) \(\mathbf{A} \bigodot \mathbf{B}\)  
-\(C_{i,j} = A_{i,j} B_{i,j}\)
+**element-wise product** (aka, **Hadamard product**)  
+\[ \mathbf{C} = \mathbf{A} \bigodot \mathbf{B} \]
+\[ C_{i,j} = A_{i,j} B_{i,j} \]
 
 **dot product**: 
 \(\mathbf{x} \cdot \mathbf{y} = \mathbf{x}^T \mathbf{y}\)
@@ -94,8 +95,11 @@ def transposition
 
 \[ \mathbf{x}^T \mathbf{y} = (\mathbf{x}^T \mathbf{y})^T = \mathbf{y}^T \mathbf{x} \tag{2.10} \]
 
+a system of linear equations:
+
 \[ \mathbf{Ax} = \mathbf{b} \tag{2.11} \]
-\(\mathbf{A} \in \mathbb{R}^{m \times n}\), \(\mathbf{b} \in \mathbb{R}^m\), \(\mathbf{x} \in \mathbb{R}^n\)
+
+where \(\mathbf{A} \in \mathbb{R}^{m \times n}\), \(\mathbf{b} \in \mathbb{R}^m\), \(\mathbf{x} \in \mathbb{R}^n\)
 
 \[
 	\begin{align*}
@@ -127,8 +131,8 @@ def transposition
 \[ \mathbf{A}^{-1} \mathbf{A} = \mathbf{I}_n \tag{2.21} \]
 
 
-
 ## 02.04. Linear Dependence and Span
+
 
 
 ## 02.05. Norms
