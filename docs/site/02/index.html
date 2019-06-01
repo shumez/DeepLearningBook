@@ -66,6 +66,9 @@
     <li class="toctree-l2"><a href="#contents">Contents</a></li>
     
 
+    <li class="toctree-l2"><a href="#0200">02.00.</a></li>
+    
+
     <li class="toctree-l2"><a href="#0201_scalars_vectors_matrices_and_tensors">02.01. Scalars, Vectors, Matrices and Tensors</a></li>
     
 
@@ -73,6 +76,33 @@
     
 
     <li class="toctree-l2"><a href="#0203_identity_and_inverse_matrices">02.03. Identity and Inverse Matrices</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0204_linear_dependence_and_span">02.04. Linear Dependence and Span</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0205_norms">02.05. Norms</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0206_special_kinds_of_matricesand_vectors">02.06. Special Kinds of Matricesand Vectors</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0207_eigendecomposition">02.07. Eigendecomposition</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0208_singular_value_decomposition">02.08. Singular Value Decomposition</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0209_the_moore-penrose_pseudoinverse">02.09. The Moore-Penrose Pseudoinverse</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0210_the_trace_operator">02.10. The Trace Operator</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0211_the_determinant">02.11. The Determinant</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0212_example_principal_components_analysis">02.12. Example: Principal Components Analysis</a></li>
     
 
     </ul>
@@ -115,7 +145,7 @@ Filename:   note.md
 Project:    /Users/shume/Developer/DeepLearningBook/02
 Author:     shumez <https://github.com/shumez>
 Created:    2019-05-30 18:20:7
-Modified:   2019-05-30 20:21:28
+Modified:   2019-06-01 15:51:47
 -----
 Copyright (c) 2019 shumez
 -->
@@ -123,21 +153,131 @@ Copyright (c) 2019 shumez
 <h1 id="02_linear_algebra"><a href="https://www.deeplearningbook.org/contents/linear_algebra.html">02. Linear Algebra</a><a class="headerlink" href="#02_linear_algebra" title="Permanent link">&para;</a></h1>
 <h2 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
 <ul>
+<li><a href="#0200">02.00.</a></li>
 <li><a href="#0201_scalars_vectors_matrices_and_tensors">02.01. Scalars, Vectors, Matrices and Tensors</a></li>
 <li><a href="#0202_multiplying_matrices_and_vectors">02.02. Multiplying Matrices and Vectors</a></li>
 <li><a href="#0203_identity_and_inverse_matrices">02.03. Identity and Inverse Matrices</a></li>
+<li><a href="#0204_linear_dependence_and_span">02.04. Linear Dependence and Span</a></li>
+<li><a href="#0205_norms">02.05. Norms</a></li>
+<li><a href="#0206_special_kinds_of_matricesand_vectors">02.06. Special Kinds of Matricesand Vectors</a></li>
+<li><a href="#0207_eigendecomposition">02.07. Eigendecomposition</a></li>
+<li><a href="#0208_singular_value_decomposition">02.08. Singular Value Decomposition</a></li>
+<li><a href="#0209_the_moore-penrose_pseudoinverse">02.09. The Moore-Penrose Pseudoinverse</a></li>
+<li><a href="#0210_the_trace_operator">02.10. The Trace Operator</a></li>
+<li><a href="#0211_the_determinant">02.11. The Determinant</a></li>
+<li><a href="#0212_example_principal_components_analysis">02.12. Example: Principal Components Analysis</a></li>
 </ul>
+<h2 id="0200">02.00.<a class="headerlink" href="#0200" title="Permanent link">&para;</a></h2>
+<p><em>The Matrix Cookbook</em> (<a href="#02_linear_algebra">Peterson, Pedersen, 2006</a>)<br />
+<a href="#02_linear_algebra">Shilov, 1977</a></p>
 <h2 id="0201_scalars_vectors_matrices_and_tensors">02.01. Scalars, Vectors, Matrices and Tensors<a class="headerlink" href="#0201_scalars_vectors_matrices_and_tensors" title="Permanent link">&para;</a></h2>
 <ul>
 <li>scalars</li>
-<li>vectors</li>
-<li>matrices: <script type="math/tex">\mathbf{A}</script>
-</li>
-<li>tensors: <script type="math/tex">\mathsf{A}_{i, j, k}</script>
+<li>vectors: <script type="math/tex">\mathbf{x}</script>
 </li>
 </ul>
+<p>
+<script type="math/tex; mode=display">
+    \mathbf{x} = 
+    \begin{bmatrix}
+        x_1 \\ x_2 \\ \vdots \\ x_n
+    \end{bmatrix}
+    \tag{2.1}
+</script>
+</p>
+<ul>
+<li>matrices: <script type="math/tex">\mathbf{A}</script>
+</li>
+</ul>
+<p>
+<script type="math/tex; mode=display">
+    \mathbf{A} = 
+    \begin{bmatrix}
+        A_{1,1} & A_{1,2} \\
+        A_{2,1} & A_{2,2} \\
+        A_{3,1} & A_{3,2}
+    \end{bmatrix} \Rightarrow \mathbf{A}^T =
+    \begin{bmatrix}
+        A_{1,1} & A_{2,1} & A_{3,1} \\
+        A_{1,2} & A_{2,2} & A_{3,2}
+    \end{bmatrix}
+</script>
+</p>
+<ul>
+<li>tensors: <script type="math/tex">\mathsf{A}</script>
+</li>
+</ul>
+<p>
+<script type="math/tex">A_{i, j, k}</script>
+</p>
+<p>def transposition
+<script type="math/tex; mode=display"> (\mathbf{A}^T)_{i,j} = \mathbf{A}_{j,i} \tag{2.3} </script>
+</p>
+<p>
+<script type="math/tex">\mathbf{C} = \mathbf{A} + \mathbf{B}</script> where <script type="math/tex">C_{i,j} = A_{i,j} + B_{i,j}</script>
+</p>
+<p>
+<script type="math/tex">\mathbf{D} = a \cdot \mathbf{B} + c</script> where <script type="math/tex">D_{i,j} = a \cdot B_{i,j} + c</script>
+</p>
+<p>
+<script type="math/tex">\mathbf{C} = \mathbf{A} + \mathbf{b}</script> where <script type="math/tex">C_{i,j} = A_{i,j} + b_j</script>
+<br />
+<strong>broadacsting</strong></p>
 <h2 id="0202_multiplying_matrices_and_vectors">02.02. Multiplying Matrices and Vectors<a class="headerlink" href="#0202_multiplying_matrices_and_vectors" title="Permanent link">&para;</a></h2>
+<p><strong>matrix product</strong><br />
+<script type="math/tex; mode=display"> \mathbf{C} = \mathbf{AB} \tag{2.4} </script>
+<script type="math/tex; mode=display"> C_{i,j} = \sum_k{A_{i,k} B_{k,j}} \tag{2.5} </script>
+</p>
+<p><strong>element-wise product</strong> (aka, <strong>Hadamard product</strong>) <script type="math/tex">\mathbf{A} \bigodot \mathbf{B}</script>
+<br />
+<script type="math/tex">C_{i,j} = A_{i,j} B_{i,j}</script>
+</p>
+<p><strong>dot product</strong>: 
+<script type="math/tex">\mathbf{x} \cdot \mathbf{y} = \mathbf{x}^T \mathbf{y}</script>
+</p>
+<p>
+<script type="math/tex; mode=display"> \mathbf{x}^T \mathbf{y} = \mathbf{y}^T \mathbf{x} \tag{2.8} </script>
+</p>
+<p>
+<script type="math/tex; mode=display"> (\mathbf{AB})^T = \mathbf{B}^T \mathbf{A}^T \tag{2.9} </script>
+</p>
+<p>
+<script type="math/tex; mode=display"> \mathbf{x}^T \mathbf{y} = (\mathbf{x}^T \mathbf{y})^T = \mathbf{y}^T \mathbf{x} \tag{2.10} </script>
+</p>
+<p>
+<script type="math/tex; mode=display"> \mathbf{Ax} = \mathbf{b} \tag{2.11} </script>
+<script type="math/tex">\mathbf{A} \in \mathbb{R}^{m \times n}</script>, <script type="math/tex">\mathbf{b} \in \mathbb{R}^m</script>, <script type="math/tex">\mathbf{x} \in \mathbb{R}^n</script>
+</p>
+<p>
+<script type="math/tex; mode=display">
+    \begin{align*}
+        \mathbf{A}_{1,:} \mathbf{x} &= b_1 \tag{2.12} \\
+        \mathbf{A}_{2,:} \mathbf{x} &= b_2 \tag{2.13} \\
+        \vdots \tag{2.14} \\
+        \mathbf{A}_{m,:} \mathbf{x} &= b_m \tag{2.15} \\
+    \end{align*}
+</script>
+</p>
+<p>
+<script type="math/tex; mode=display"> 
+    \begin{align*}
+        \mathbf{A}_{1,1} x_1 + \mathbf{A}_{1,2} x_2 + \cdots + \mathbf{A}_{1,n} x_n &= b_1 \tag{2.16} \\
+        \mathbf{A}_{2,1} x_1 + \mathbf{A}_{2,2} x_2 + \cdots + \mathbf{A}_{2,n} x_n &= b_2 \tag{2.17} \\
+        \vdots \tag{2.18} \\
+        \mathbf{A}_{m,1} x_1 + \mathbf{A}_{m,2} x_2 + \cdots + \mathbf{A}_{m,n} x_n &= b_m \tag{2.19} 
+    \end{align*}
+</script>
+</p>
 <h2 id="0203_identity_and_inverse_matrices">02.03. Identity and Inverse Matrices<a class="headerlink" href="#0203_identity_and_inverse_matrices" title="Permanent link">&para;</a></h2>
+<h2 id="0204_linear_dependence_and_span">02.04. Linear Dependence and Span<a class="headerlink" href="#0204_linear_dependence_and_span" title="Permanent link">&para;</a></h2>
+<h2 id="0205_norms">02.05. Norms<a class="headerlink" href="#0205_norms" title="Permanent link">&para;</a></h2>
+<h2 id="0206_special_kinds_of_matricesand_vectors">02.06. Special Kinds of Matricesand Vectors<a class="headerlink" href="#0206_special_kinds_of_matricesand_vectors" title="Permanent link">&para;</a></h2>
+<h2 id="0207_eigendecomposition">02.07. Eigendecomposition<a class="headerlink" href="#0207_eigendecomposition" title="Permanent link">&para;</a></h2>
+<h2 id="0208_singular_value_decomposition">02.08. Singular Value Decomposition<a class="headerlink" href="#0208_singular_value_decomposition" title="Permanent link">&para;</a></h2>
+<h2 id="0209_the_moore-penrose_pseudoinverse">02.09. The Moore-Penrose Pseudoinverse<a class="headerlink" href="#0209_the_moore-penrose_pseudoinverse" title="Permanent link">&para;</a></h2>
+<h2 id="0210_the_trace_operator">02.10. The Trace Operator<a class="headerlink" href="#0210_the_trace_operator" title="Permanent link">&para;</a></h2>
+<h2 id="0211_the_determinant">02.11. The Determinant<a class="headerlink" href="#0211_the_determinant" title="Permanent link">&para;</a></h2>
+<h2 id="0212_example_principal_components_analysis">02.12. Example: Principal Components Analysis<a class="headerlink" href="#0212_example_principal_components_analysis" title="Permanent link">&para;</a></h2>
 <h2 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <!-- toc -->
 
@@ -203,5 +343,5 @@ Copyright (c) 2019 shumez
 
 <!--
 MkDocs version : 1.0.2
-Build Date UTC : 2019-06-01 05:38:01
+Build Date UTC : 2019-06-01 06:52:20
 -->
