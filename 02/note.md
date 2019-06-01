@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:20:7
-Modified: 	2019-06-01 19:41:20
+Modified: 	2019-06-01 20:24:23
 -----
 Copyright (c) 2019 shumez
 -->
@@ -82,7 +82,7 @@ def transposition
 \[ C_{i,j} = \sum_k{A_{i,k} B_{k,j}} \tag{2.5} \]
 
 **element-wise product** (aka, **Hadamard product**)  
-\[ \mathbf{C} = \mathbf{A} \bigodot \mathbf{B} \]
+\[ \mathbf{C} = \mathbf{A} \odot \mathbf{B} \]
 \[ C_{i,j} = A_{i,j} B_{i,j} \]
 
 **dot product**: 
@@ -162,6 +162,37 @@ is also solution for any real \(\alpha\)
 
 
 ## 02.05. Norms
+
+**norm**: fn that measure size of vectors 
+
+\(L^p\) norm is given by
+
+\[ ||x||_p = \Bigg( \sum_i{|x_i|^p} \Bigg)^{\frac{1}{p}} \tag{2.30} \]
+
+for \(p \in \mathbb{R}\), \(p \ge 1\)
+
+* \(f(\mathbf{x}) = 0\) &rArr; \(x=0\)
+* \(f(\mathbf{x} + \mathbf{y}) \le f(\mathbf{x}) + f(\mathbf{y})\) (**triangle inequality**)
+* \(\forall\alpha \in \mathbb{R}\), \(f(\alpha \mathbf{x}) = |\alpha| f(x)\)
+
+\(L^2\) norm, with \(p=2\) ka **Euclidean norm** (\(||x||\))
+
+\(L^1\) norm
+
+\[ ||x||_1 = \sum_i{|x_i|} \tag{2.31} \]
+
+\(L^\infty\) norm (aka, **max norm**)
+
+\[ ||x||_\infty = \max_i{|x_i|} \tag{2.32} \]
+
+**Frobenius norm**
+
+\[ ||A||_F = \sqrt{\sum_{i,j}{\mathbf{A}_{i,j}^2}} \tag{2.33} \]
+is analogous to \(L^2\) norm of vec
+
+\[ \mathbf{x}^T \mathbf{y} = ||\mathbf{x}||_2 ||\mathbf{y}||_2 \cos{\theta} \tag{2.34} \]
+
+where \(\theta\) is angle between \(\mathbf{x}\), \(\mathbf{y}\)
 
 
 ## 02.06. Special Kinds of Matricesand Vectors
