@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:20:7
-Modified: 	2019-06-01 15:05:36
+Modified: 	2019-06-01 15:22:5
 -----
 Copyright (c) 2019 shumez
 -->
@@ -34,10 +34,46 @@ Copyright (c) 2019 shumez
 
 ## 02.01. Scalars, Vectors, Matrices and Tensors
 
-- scalars
-- vectors
-- matrices: \(\mathbf{A}\)
-- tensors: \(\mathsf{A}_{i, j, k}\)
+* scalars
+* vectors: \(\mathbf{x}\)
+
+\[
+	\mathbf{x} = 
+	\begin{bmatrix}
+		x_1 \\ x_2 \\ \vdots \\ x_n
+	\end{bmatrix}
+	\tag{2.1}
+\]
+
+* matrices: \(\mathbf{A}\)
+
+\[
+	\mathbf{A} = 
+	\begin{bmatrix}
+		A_{1,1} & A_{1,2} \\
+		A_{2,1} & A_{2,2} \\
+		A_{3,1} & A_{3,2}
+	\end{bmatrix} \Rightarrow \mathbf{A}^T =
+	\begin{bmatrix}
+		A_{1,1} & A_{2,1} & A_{3,1} \\
+		A_{1,2} & A_{2,2} & A_{3,2}
+	\end{bmatrix}
+\]
+
+* tensors: \(\mathsf{A}\) 
+
+\(A_{i, j, k}\)
+
+def transposition
+\[ (\mathbf{A}^T)_{i,j} = \mathbf{A}_{j,i} \tag{2.3} \]
+
+\(\mathbf{C} = \mathbf{A} + \mathbf{B}\) where \(C_{i,j} = A_{i,j} + B_{i,j}\)
+
+\(\mathbf{D} = a \cdot \mathbf{B} + c\) where \(D_{i,j} = a \cdot B_{i,j} + c\)
+
+\(\mathbf{C} = \mathbf{A} + \mathbf{b}\) where \(C_{i,j} = A_{i,j} + b_j\)  
+**broadacsting**
+
 
 ## 02.02. Multiplying Matrices and Vectors
 
