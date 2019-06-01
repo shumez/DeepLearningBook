@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook
 Author: 	shumez <https://github.com/shumez>
 Created: 	2018-07-06 13:36:3
-Modified: 	2019-06-01 20:37:3
+Modified: 	2019-06-01 20:38:45
 -----
 Copyright (c) 2019 shumez
 -->
@@ -210,10 +210,6 @@ Copyright (c) 2019 shumez
 * [github]
 
 ##
-[Deep Learning Book]: https://www.deeplearningbook.org
-[Lecture]: https://www.deeplearningbook.org/lecture_slides.html
-[github]: https://github.com/janishar/mit-deep-learning-book-pdf
-
 <!-- toc -->
 [P0]: #contents
 [01]: 01/
@@ -239,6 +235,11 @@ Copyright (c) 2019 shumez
 [18]: 18/
 [19]: 19/
 [20]: 20/
+
+<!-- ref -->
+[Deep Learning Book]: https://www.deeplearningbook.org
+[Lecture]: https://www.deeplearningbook.org/lecture_slides.html
+[github]: https://github.com/janishar/mit-deep-learning-book-pdf
 
 <!-- fig -->
 [cover]: https://images-na.ssl-images-amazon.com/images/I/61fim5QqaqL._SX373_BO1,204,203,200_.jpg
