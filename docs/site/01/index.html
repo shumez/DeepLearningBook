@@ -124,7 +124,7 @@ Filename:   note.md
 Project:    /Users/shume/Developer/DeepLearningBook/01
 Author:     shumez <https://github.com/shumez>
 Created:    2019-05-30 18:19:8
-Modified:   2019-05-31 20:56:51
+Modified:   2019-06-01 12:10:36
 -----
 Copyright (c) 2019 shumez
 -->
@@ -160,14 +160,39 @@ Copyright (c) 2019 shumez
 <li><strong>connectionism</strong> in 1980s-1990s</li>
 <li>deep learning in 2006</li>
 </ul>
-<iframe name="ngram_chart" src="https://books.google.com/ngrams/interactive_chart?content=cybernetics%2Cconnectionism%2Cneural+network%2Cdeep+learning%2Cmachine+learning&year_start=1940&year_end=2019&corpus=15&smoothing=3&share=&direct_url=t1%3B%2Ccybernetics%3B%2Cc0%3B.t1%3B%2Cconnectionism%3B%2Cc0%3B.t1%3B%2Cneural%20network%3B%2Cc0%3B.t1%3B%2Cdeep%20learning%3B%2Cc0%3B.t1%3B%2Cmachine%20learning%3B%2Cc0" width=800 height=300 marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no></iframe>
+<iframe name="ngram_chart" src="https://books.google.com/ngrams/interactive_chart?content=cybernetics%2Cconnectionism%2Cneural+network%2Cdeep+learning%2Cmachine+learning&year_start=1945&year_end=2019&corpus=15&smoothing=3&share=&direct_url=t1%3B%2Ccybernetics%3B%2Cc0%3B.t1%3B%2Cconnectionism%3B%2Cc0%3B.t1%3B%2Cneural%20network%3B%2Cc0%3B.t1%3B%2Cdeep%20learning%3B%2Cc0%3B.t1%3B%2Cmachine%20learning%3B%2Cc0" width=800 height=300 marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no></iframe>
 
 <p><strong>artificial neural networks</strong> (ANNs)</p>
 <p>
 <script type="math/tex">f(\mathbf{x}, \mathbf{w}) = x_1 x_1 + \cdots + x_n w_n</script>
 </p>
-<p><strong>McCulloch-Pitts Neuron</strong> ([McCulloch, Pitts, 1943][1943_Pitts_McCulloch])</p>
-<p>perceptron ([Rosenblatt, 1958][1958_Rosenblatt], [1962][1962_Rosenblatt])</p>
+<p><strong>McCulloch-Pitts Neuron</strong> (<a href="#010201">McCulloch, Pitts, 1943</a>)</p>
+<p>perceptron (<a href="#010201">Rosenblatt, 1958</a>, <a href="#010201">1962</a>)</p>
+<p>ADALINE (<a href="#010201">Widrow, Hoff, 1960</a>)</p>
+<p><strong>stochasic gradient descent</strong></p>
+<p><strong>linear models</strong></p>
+<p>limitation:<br />
+connot learn the XOR fn<br />
+<script type="math/tex; mode=display">
+    \begin{cases}
+        f([0,1], \mathbf{w}) = 1 \\
+        f([1,0], \mathbf{w}) = 1 \\
+        f([1,1], \mathbf{w}) = 1 \\
+        f([0,0], \mathbf{w}) = 0 
+    \end{cases}
+</script>
+</p>
+<p><a href="#010201">Minsky, Papert, 1969</a></p>
+<p><a href="#010201">Olshausen, Field, 2005</a></p>
+<p>ferrets brain (<a href="#010201">Von Melshner, 2000</a>)</p>
+<p>Neocognitron (<a href="#010201">Fukushima, 1980</a>) &rarr; modern convolutional network (<a href="#010201">LeCun, 1998</a>)</p>
+<p><strong>rectified linear unit</strong></p>
+<p>original Cognitron (<a href="#010201">Fukushima, 1975</a>)</p>
+<p><a href="#010201">Nair, Hinton, 2010</a>, <a href="#010201">Glorot, 2011</a> citing neuroscience, <a href="#010201">Jarrett, 2009</a> citing more engineering-oriented</p>
+<p>1980s: second wave of NN</p>
+<p>movement <strong>connectionism</strong> / <strong>parallel distributed processing</strong> (<a href="#010201">Rumelhart, 1986</a>, <a href="#010201">McClelland, 1995</a>)</p>
+<p>models of cognition grounded in neural implementation (<a href="#010201">Touretzky, Minton, 1985</a>), reviving work og Fonald Hebb in 1940s (<a href="#010201">Hebb, 1949</a>)</p>
+<p>connectionsim: large num of sumple computational units can ahchive intelligent behavior</p>
 <h3 id="010202_increasing_dataset_sizes">01.02.02. Increasing Dataset Sizes<a class="headerlink" href="#010202_increasing_dataset_sizes" title="Permanent link">&para;</a></h3>
 <h3 id="010203_increasing_model_sizes">01.02.03. Increasing Model Sizes<a class="headerlink" href="#010203_increasing_model_sizes" title="Permanent link">&para;</a></h3>
 <h3 id="010204_increasing_accuracy_complexity_and_real-world_impact">01.02.04. Increasing Accuracy, Complexity and Real-World Impact<a class="headerlink" href="#010204_increasing_accuracy_complexity_and_real-world_impact" title="Permanent link">&para;</a></h3>
@@ -240,5 +265,5 @@ Copyright (c) 2019 shumez
 
 <!--
 MkDocs version : 1.0.2
-Build Date UTC : 2019-05-31 11:57:23
+Build Date UTC : 2019-06-01 03:11:01
 -->
