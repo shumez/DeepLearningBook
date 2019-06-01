@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook
 Author: 	shumez <https://github.com/shumez>
 Created: 	2018-07-06 13:36:3
-Modified: 	2019-05-30 20:31:32
+Modified: 	2019-06-01 20:37:3
 -----
 Copyright (c) 2019 shumez
 -->
@@ -14,11 +14,11 @@ Copyright (c) 2019 shumez
 
 ## Contents
 
-* [Part 0.][01]
+* [Part 0.][P0]
     * [01. Introduction][01]
         <!-- * [1.1 Who Should Read This Book?]() -->
         <!-- * [1.2 Historical Trends in Deep Learning]() -->
-* [Part I. Applied Math and Machine Learning Basics][02]
+* [Part I. Applied Math and Machine Learning Basics][PI]
     * [02. Linear Algebra][02]
         <!-- - 2.1 Scalars,Vectors, MatricesandTensors -->
         <!-- - 2.2 Multiplying Matrices and Vectors -->
@@ -65,7 +65,7 @@ Copyright (c) 2019 shumez
         <!-- - 5.9 Stochastic Gradient Descent -->
         <!-- - 5.10 Building a Machine Learning Algorithm -->
         <!-- - 5.11 ChallengesMotivatingDeepLearning -->
-* [Part II. Deep Networks: Modern Practices][06]
+* [Part II. Deep Networks: Modern Practices][PII]
     * [06. Deep Feedforward Networks][06]
         <!-- - 6.1 Example: Learning XOR -->
         <!-- - 6.2 Gradient-Based Learning -->
@@ -134,7 +134,7 @@ Copyright (c) 2019 shumez
         <!-- - 12.3 Speech Recognition -->
         <!-- - 12.4 Natural Language Processing -->
         <!-- - 12.5 Other Applications -->
-* [Part III. Deep Learning Research][13]
+* [Part III. Deep Learning Research][PIII]
     * [13. Linear Factor Models][13]
         <!-- - 13.1 ProbabilisticPCAandFactorAnalysis -->
         <!-- - 13.2 IndependentComponentAnalysis(ICA) -->
@@ -203,15 +203,26 @@ Copyright (c) 2019 shumez
         <!-- - 20.14 Evaluating Generative Models -->
         <!-- - 20.15 Conclusion -->
 
+## Resources
+
+* [Deep Learning Book]
+* [Lecture]
+* [github]
+
 ##
 [Deep Learning Book]: https://www.deeplearningbook.org
+[Lecture]: https://www.deeplearningbook.org/lecture_slides.html
+[github]: https://github.com/janishar/mit-deep-learning-book-pdf
 
 <!-- toc -->
+[P0]: #contents
 [01]: 01/
+[PI]: #contents
 [02]: 02/
 [03]: 03/
 [04]: 04/
 [05]: 05/
+[PII]: #contents
 [06]: 06/
 [07]: 07/
 [08]: 08/
@@ -219,6 +230,7 @@ Copyright (c) 2019 shumez
 [10]: 10/
 [11]: 11/
 [12]: 12/
+[PIII]: #contents
 [13]: 13/
 [14]: 14/
 [15]: 15/
