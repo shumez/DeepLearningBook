@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:20:7
-Modified: 	2019-06-01 15:51:47
+Modified: 	2019-06-01 16:34:0
 -----
 Copyright (c) 2019 shumez
 -->
@@ -116,8 +116,16 @@ def transposition
 \]
 
 
-
 ## 02.03. Identity and Inverse Matrices
+
+**matrix inversion**
+
+**identity matrix** \(\mathbf{I}_n \in \mathbb{R}^{n \times n}\)
+
+\[ \forall\mathbf{x} \in \mathbb{R}^n, \mathbf{I}_n \mathbf{x} = \mathbf{x} \tag{2.20} \]
+
+\[ \mathbf{A}^{-1} \mathbf{A} = \mathbf{I}_n \tag{2.21} \]
+
 
 
 ## 02.04. Linear Dependence and Span
