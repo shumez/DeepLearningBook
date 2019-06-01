@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:20:7
-Modified: 	2019-06-01 17:56:24
+Modified: 	2019-06-01 18:04:57
 -----
 Copyright (c) 2019 shumez
 -->
@@ -148,14 +148,13 @@ if both \(\mathbf{x}\) and \(\mathbf{y}\) are solutions then
 
 is also solution for any real \(\alpha\)
 
-**origin**
-
 \[ \mathbf{Ax} = \sum_i{x_i \mathbf{A}_{:,i}} \tag{2.27} \]
 
 **linear combination**
 
-
 \[ \sum_i{c_i \mathbf{v}^{(i)}} \tag{2.28} \]
+
+**span** 
 
 
 ## 02.05. Norms
