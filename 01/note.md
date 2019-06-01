@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/01
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:19:8
-Modified: 	2019-06-01 14:37:25
+Modified: 	2019-06-01 20:40:8
 -----
 Copyright (c) 2019 shumez
 -->
@@ -12,6 +12,7 @@ Copyright (c) 2019 shumez
 
 ## Contents
 
+* [01.00.][0100]
 * [01.01. Who Should Read This Book?][0101]
 * [01.02. Historical Trends in Deep Learning][0102]
 	* [01.02.01. The Many Names and Changing Fortunes of Neural Networks][010201]
@@ -19,7 +20,7 @@ Copyright (c) 2019 shumez
 	* [01.02.03. INcreasing Model Sizes][010203]
 	* [01.02.04. Increasing Accuracy, Complexity and Real-World Impact][010204]
 
-##
+## 01.00
 
 ancient Greece
 
@@ -119,10 +120,6 @@ deep belief network trained using **greedy layer-wise pretraining** ([Hinton, 20
 [Bengio, 2007][2007_Bengio], [Ranzato, 2007][2007_Ranzato]  
 
 
-
-
-
-
 ### 01.02.02. Increasing Dataset Sizes
 
 ### 01.02.03. Increasing Model Sizes
@@ -136,6 +133,7 @@ deep belief network trained using **greedy layer-wise pretraining** ([Hinton, 20
 [01. Introduction]: https://www.deeplearningbook.org/contents/intro.html
 
 <!-- toc -->
+[0100]: #0100
 [0101]: #0101_who_should_read_this_book
 [0102]: #0102_historical_trends_in_deep_learning
 [010201]:  #010201_the_many_names_and_changing_fortunes_of_neural_networks
