@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/01
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:19:8
-Modified: 	2019-06-01 12:10:36
+Modified: 	2019-06-01 14:37:25
 -----
 Copyright (c) 2019 shumez
 -->
@@ -96,6 +96,31 @@ models of cognition grounded in neural implementation ([Touretzky, Minton, 1985]
 
 connectionsim: large num of sumple computational units can ahchive intelligent behavior
 
+**distributed representation** ([Hinton, 1986][1986_Hinton])  
+e.g., 3 neurons describing 3 colors & 3 neurons 3 objects
+
+**back-propagation** ([Rumelhart, 1986][1986_Rumelhart], [LeCun, 1987][1987_LeCun])
+
+during 1990s  
+[Hochreiter, 1991][1991_Hochreiter], [Bengio, 1994][1994_Bengio]
+
+Long short-term memody (LSTM) ([Hochreiter, Schmidhuber, 1997][1997_Schmidhuber_Hochreiter])
+
+mid-1990s  
+Kernel machines ([Boser, 1992][1992_Boser], [Corters, Vapnik, 1995][1995_Vapnik_Cortes], [Schölkopf, 1999][1999_Schölkopf])  
+graphical models ([Jordan, 1998][1998_Jordan])
+
+[LeCun, 1998][1998_LeCun], [Bengio, 2001][2001_Bengio]
+
+
+3rd wave of NN
+
+deep belief network trained using **greedy layer-wise pretraining** ([Hinton, 2006][2006_Hinton])  
+[Bengio, 2007][2007_Bengio], [Ranzato, 2007][2007_Ranzato]  
+
+
+
+
 
 
 ### 01.02.02. Increasing Dataset Sizes
@@ -138,6 +163,20 @@ connectionsim: large num of sumple computational units can ahchive intelligent b
 [1995_McClelland]: #010201
 [1985_Minton_Touretzky]: #010201
 [1949_Hebb]: #010201
+[1986_Hinton]: #010201
+[1987_LeCun]: #010201
+[1991_Hochreiter]: #010201
+[1994_Bengio]: #010201
+[1997_Schmidhuber_Hochreiter]: #010201
+[1992_Boser]: #010201
+[1995_Vapnik_Cortes]: #010201
+[1999_Schölkopf]: #010201
+[1998_Jordan]: #010201
+[1998_LeCun]: #010201
+[2001_Bengio]: #010201
+[2006_Hinton]: #010201
+[2007_Bengio]: #010201
+[2007_Ranzato]: #010201
 
 <!-- fig -->
 
