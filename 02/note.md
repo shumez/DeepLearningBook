@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:20:7
-Modified: 	2019-06-02 15:31:10
+Modified: 	2019-06-02 15:41:8
 -----
 Copyright (c) 2019 shumez
 -->
@@ -259,6 +259,15 @@ AT_A = np.matmul(A, A.T)
 
 
 ## 02.07. Eigendecomposition
+
+**eigendecomposition**: into set of eigenvectors & eigenvalues
+
+**eigenvector** of square mat \(\mathbf{A}\) is non-zero vec \(\mathbf{v}\)
+\[ \mathbf{A}\mathbf{v} = \lambda \mathbf{v} \tag{2.39} \]
+
+**eigenvalue** \(\lambda\) 
+
+
 
 
 ## 02.08. Singular Value Decomposition
