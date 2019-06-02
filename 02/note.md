@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:20:7
-Modified: 	2019-06-01 20:27:12
+Modified: 	2019-06-02 15:31:10
 -----
 Copyright (c) 2019 shumez
 -->
@@ -200,6 +200,62 @@ where \(\theta\) is angle between \(\mathbf{x}\), \(\mathbf{y}\)
 **diagonal** \(\mathbf{D}\)  
 if and only if \(D_{i,j}=0\) for all \(i \ne j\)
 
+```py
+np.random.seed(123)
+v = np.random.randint(9, size=5)
+np.diag(v)
+```
+```py
+array([[2, 0, 0, 0, 0],
+       [0, 2, 0, 0, 0],
+       [0, 0, 6, 0, 0],
+       [0, 0, 0, 1, 0],
+       [0, 0, 0, 0, 3]])
+```
+
+\[ \text{diag}(\mathbf{v}) \mathbf{x} = \mathbf{v} \odot \mathbf{x} \]
+
+```py
+np.matmul(np.diag(v), x)
+
+np.multiply(v, x)
+```
+
+\[ \text{diag}(\mathbf{v})^{-1} = \text{diag}\Bigg( \bigg[\frac{1}{v_1}, \cdots \frac{1}{v_n} \bigg]^T \Bigg) \]
+
+```py
+np.linalg.inv(diag_v)
+np.diag([1/vi for vi in v])
+```
+
+**symmetric** mat
+
+\[ \mathbf{A} = \mathbf{A}^T \tag{2.35} \]
+
+**unit vector**: vec w/ **unit norm**:
+
+\[ ||x||_2 = 1 \tag{2.36} \]
+
+vec \(\mathbf{x}\) and vec \(\mathbf{y}\) **orthogonal** to each other if \(\mathbf{x}^T \mathbf{y} = 0\)
+
+orthogonal & unit norm **orthonormal**
+
+**orthogonal matrix**
+
+\[ \mathbf{A}^T \mathbf{A} = \mathbf{A}\mathbf{A}^T = \mathbf{I} \tag{2.37} \]
+
+implyies 
+\[ \mathbf{A}^{-1} = \mathbf{A}^T \tag{2.38} \]
+
+
+```py
+from scipy.stats import ortho_group
+
+A = ortho_group.rvs(dim = 3)
+
+np.set_printoptions(suppress=True)
+AT_A = np.matmul(A, A.T)
+```
 
 
 ## 02.07. Eigendecomposition
