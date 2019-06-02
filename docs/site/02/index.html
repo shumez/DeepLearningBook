@@ -145,7 +145,7 @@ Filename:   note.md
 Project:    /Users/shume/Developer/DeepLearningBook/02
 Author:     shumez <https://github.com/shumez>
 Created:    2019-05-30 18:20:7
-Modified:   2019-06-01 20:27:12
+Modified:   2019-06-02 18:11:16
 -----
 Copyright (c) 2019 shumez
 -->
@@ -353,7 +353,80 @@ is analogous to <script type="math/tex">L^2</script> norm of vec</p>
 <br />
 if and only if <script type="math/tex">D_{i,j}=0</script> for all <script type="math/tex">i \ne j</script>
 </p>
+<pre><code class="py">np.random.seed(123)
+v = np.random.randint(9, size=5)
+np.diag(v)
+</code></pre>
+
+<pre><code class="py">array([[2, 0, 0, 0, 0],
+       [0, 2, 0, 0, 0],
+       [0, 0, 6, 0, 0],
+       [0, 0, 0, 1, 0],
+       [0, 0, 0, 0, 3]])
+</code></pre>
+
+<p>
+<script type="math/tex; mode=display"> \text{diag}(\mathbf{v}) \mathbf{x} = \mathbf{v} \odot \mathbf{x} </script>
+</p>
+<pre><code class="py">np.matmul(np.diag(v), x)
+
+np.multiply(v, x)
+</code></pre>
+
+<p>
+<script type="math/tex; mode=display"> \text{diag}(\mathbf{v})^{-1} = \text{diag}\Bigg( \bigg[\frac{1}{v_1}, \cdots \frac{1}{v_n} \bigg]^T \Bigg) </script>
+</p>
+<pre><code class="py">np.linalg.inv(diag_v)
+np.diag([1/vi for vi in v])
+</code></pre>
+
+<p><strong>symmetric</strong> mat</p>
+<p>
+<script type="math/tex; mode=display"> \mathbf{A} = \mathbf{A}^T \tag{2.35} </script>
+</p>
+<p><strong>unit vector</strong>: vec w/ <strong>unit norm</strong>:</p>
+<p>
+<script type="math/tex; mode=display"> ||x||_2 = 1 \tag{2.36} </script>
+</p>
+<p>vec <script type="math/tex">\mathbf{x}</script> and vec <script type="math/tex">\mathbf{y}</script>
+<strong>orthogonal</strong> to each other if <script type="math/tex">\mathbf{x}^T \mathbf{y} = 0</script>
+</p>
+<p>orthogonal &amp; unit norm <strong>orthonormal</strong></p>
+<p><strong>orthogonal matrix</strong></p>
+<p>
+<script type="math/tex; mode=display"> \mathbf{A}^T \mathbf{A} = \mathbf{A}\mathbf{A}^T = \mathbf{I} \tag{2.37} </script>
+</p>
+<p>implyies 
+<script type="math/tex; mode=display"> \mathbf{A}^{-1} = \mathbf{A}^T \tag{2.38} </script>
+</p>
+<pre><code class="py">from scipy.stats import ortho_group
+
+A = ortho_group.rvs(dim = 3)
+
+np.set_printoptions(suppress=True)
+AT_A = np.matmul(A, A.T)
+</code></pre>
+
 <h2 id="0207_eigendecomposition">02.07. Eigendecomposition<a class="headerlink" href="#0207_eigendecomposition" title="Permanent link">&para;</a></h2>
+<p><strong>eigendecomposition</strong>: into set of eigenvectors &amp; eigenvalues</p>
+<p><strong>eigenvector</strong> of square mat <script type="math/tex">\mathbf{A}</script> is non-zero vec <script type="math/tex">\mathbf{v}</script>
+<script type="math/tex; mode=display"> \mathbf{A}\mathbf{v} = \lambda \mathbf{v} \tag{2.39} </script>
+</p>
+<p><strong>eigenvalue</strong> <script type="math/tex">\lambda</script>
+</p>
+<pre><code class="py">l, V = np.linalg.eig(A)
+</code></pre>
+
+<p>mat <script type="math/tex">\mathbf{A}</script> has <script type="math/tex">n</script> linearly independent eigenvec <script type="math/tex">\{ \mathbf{v}^{(1)}, \cdots, \mathbf{v}^{(n)} \}</script>,
+w/ corresponding eigenval <script type="math/tex">\{ \lambda_1, \cdots, \lambda_n \}</script>
+</p>
+<p>mat <script type="math/tex">\mathbf{V}</script>: <script type="math/tex">\mathbf{V} = [ \mathbf{v}^{(1)}, \cdots, \mathbf{v}^{(b)} ] </script>,<br />
+vec <script type="math/tex">\lambda</script>: <script type="math/tex">[\lambda_1, \cdots, \lambda_n]^T</script>
+</p>
+<p><strong>eigendecomposition</strong></p>
+<p>
+<script type="math/tex; mode=display"> \mathbf{A} = \mathbf{V} \text{diag}(\lambda) \mathbf{V}^{-1} \tag{2.40} </script>
+</p>
 <h2 id="0208_singular_value_decomposition">02.08. Singular Value Decomposition<a class="headerlink" href="#0208_singular_value_decomposition" title="Permanent link">&para;</a></h2>
 <h2 id="0209_the_moore-penrose_pseudoinverse">02.09. The Moore-Penrose Pseudoinverse<a class="headerlink" href="#0209_the_moore-penrose_pseudoinverse" title="Permanent link">&para;</a></h2>
 <h2 id="0210_the_trace_operator">02.10. The Trace Operator<a class="headerlink" href="#0210_the_trace_operator" title="Permanent link">&para;</a></h2>
@@ -424,5 +497,5 @@ if and only if <script type="math/tex">D_{i,j}=0</script> for all <script type="
 
 <!--
 MkDocs version : 1.0.2
-Build Date UTC : 2019-06-01 11:57:37
+Build Date UTC : 2019-06-02 09:32:38
 -->
