@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:20:7
-Modified: 	2019-06-02 15:41:8
+Modified: 	2019-06-02 18:11:16
 -----
 Copyright (c) 2019 shumez
 -->
@@ -266,6 +266,20 @@ AT_A = np.matmul(A, A.T)
 \[ \mathbf{A}\mathbf{v} = \lambda \mathbf{v} \tag{2.39} \]
 
 **eigenvalue** \(\lambda\) 
+
+```py
+l, V = np.linalg.eig(A)
+```
+
+mat \(\mathbf{A}\) has \(n\) linearly independent eigenvec \(\{ \mathbf{v}^{(1)}, \cdots, \mathbf{v}^{(n)} \}\),
+w/ corresponding eigenval \(\{ \lambda_1, \cdots, \lambda_n \}\)
+
+mat \(\mathbf{V}\): \(\mathbf{V} = [ \mathbf{v}^{(1)}, \cdots, \mathbf{v}^{(b)} ] \),  
+vec \(\lambda\): \([\lambda_1, \cdots, \lambda_n]^T\)
+
+**eigendecomposition**
+
+\[ \mathbf{A} = \mathbf{V} \text{diag}(\lambda) \mathbf{V}^{-1} \tag{2.40} \]
 
 
 
