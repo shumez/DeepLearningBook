@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:20:7
-Modified: 	2019-06-02 18:11:16
+Modified: 	2019-06-02 20:54:19
 -----
 Copyright (c) 2019 shumez
 -->
@@ -271,6 +271,8 @@ AT_A = np.matmul(A, A.T)
 l, V = np.linalg.eig(A)
 ```
 
+[![Fig.2.3][fig0203]][fig0203]
+
 mat \(\mathbf{A}\) has \(n\) linearly independent eigenvec \(\{ \mathbf{v}^{(1)}, \cdots, \mathbf{v}^{(n)} \}\),
 w/ corresponding eigenval \(\{ \lambda_1, \cdots, \lambda_n \}\)
 
@@ -281,7 +283,34 @@ vec \(\lambda\): \([\lambda_1, \cdots, \lambda_n]^T\)
 
 \[ \mathbf{A} = \mathbf{V} \text{diag}(\lambda) \mathbf{V}^{-1} \tag{2.40} \]
 
+```py
+np.linalg.multi_dot([V, np.diag(l), np.linalg.inv(V)])
+```
 
+\[
+	\begin{align*}
+		\mathbf{A} 
+		&= \mathbf{Q \Lambda Q}^T \\
+		&= 
+		\begin{bmatrix}
+			\mathbf{v}_1 & \mathbf{v}_2 & \cdots & \mathbf{v}_n
+		\end{bmatrix}
+		\begin{bmatrix}
+			\lambda_1 & 0 & \cdots & 0 \\
+			0 & \lambda_2 & \cdots & 0 \\
+			\vdots & \vdots & \ddots & \vdots \\
+			0 & 0 & \cdots & \lambda_n 
+		\end{bmatrix}
+		\begin{bmatrix}
+			\mathbf{v}_1 \\ \mathbf{v}_2 \\ \vdots \\ \mathbf{v}_n
+		\end{bmatrix}
+	\end{align*}
+	\tag{2.41} 
+\]
+
+orthogonal mat \(\mathbf{Q}\), eigenvectors \(\mathbf{A}\), diagonal mat \(\mathbf{\Lambda}\)
+
+eigenvalue \(\mathbf{\Lambda}_{i,i}\) is associated w/ eigenvector \(\mathbf{Q}_{:,i}\)
 
 
 ## 02.08. Singular Value Decomposition
@@ -322,6 +351,7 @@ vec \(\lambda\): \([\lambda_1, \cdots, \lambda_n]^T\)
 [1977_Shilov]: #02_linear_algebra
 
 <!-- fig -->
+[fig0203]: https://raw.githubusercontent.com/shumez/DeepLearningBook/master/02/fig/0203.png
 
 <!-- term -->
 
