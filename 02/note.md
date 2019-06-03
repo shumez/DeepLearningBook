@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:20:7
-Modified: 	2019-06-03 20:12:15
+Modified: 	2019-06-03 20:14:1
 -----
 Copyright (c) 2019 shumez
 -->
@@ -394,6 +394,8 @@ though \(AB \in \mathbb{R}^{m \times m}\), \(BA \in \mathbb{R}^{n \times n}\)
 
 
 ## 02.11. The Determinant
+
+\(\det{(A)}\)
 
 
 ## 02.12. Example: Principal Components Analysis
