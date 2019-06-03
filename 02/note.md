@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:20:7
-Modified: 	2019-06-03 13:56:4
+Modified: 	2019-06-03 13:57:44
 -----
 Copyright (c) 2019 shumez
 -->
@@ -124,11 +124,11 @@ where \(\mathbf{A} \in \mathbb{R}^{m \times n}\), \(\mathbf{b} \in \mathbb{R}^m\
 
 **matrix inversion**
 
-**identity matrix** \(\mathbf{I}_n \in \mathbb{R}^{n \times n}\)
+**identity matrix** \(I_n \in \mathbb{R}^{n \times n}\)
 
-\[ \forall\mathbf{x} \in \mathbb{R}^n, \mathbf{I}_n \mathbf{x} = \mathbf{x} \tag{2.20} \]
+\[ \forall x \in \mathbb{R}^n, \quad I_n x = x \tag{2.20} \]
 
-\[ \mathbf{A}^{-1} \mathbf{A} = \mathbf{I}_n \tag{2.21} \]
+\[ A^{-1} A = I_n \tag{2.21} \]
 
 
 ## 02.04. Linear Dependence and Span
