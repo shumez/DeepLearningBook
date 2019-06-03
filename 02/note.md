@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:20:7
-Modified: 	2019-06-03 19:52:19
+Modified: 	2019-06-03 20:12:15
 -----
 Copyright (c) 2019 shumez
 -->
@@ -351,7 +351,6 @@ singular value decomposition
 
 ## 02.09. The Moore-Penrose Pseudoinverse
 
-
 \[
 	\begin{align*}
 		Ax &= y \tag{2.44} \\
@@ -371,7 +370,27 @@ pseudoinverse of \(A\) is defined as
 
 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
+
 ## 02.10. The Trace Operator
+
+\[ \mathrm{Tr}(A) = \sum_i{A_{i,i}} \tag{2.48} \]
+
+Frobenius norm 
+
+\[ ||A||_F = \sqrt{\mathrm{Tr}(A A^T)} \tag{2.49} \]
+
+\[ \mathrm{Tr}(A) = \mathrm{Tr}(A^T) \tag{2.50} \]
+
+\[ \mathrm{Tr}(ABC) = \mathrm{Tr}(CAB) = \mathrm{Tr}(BCA) \tag{2.51} \]
+
+more generally
+
+\[ \mathrm{Tr}\bigg(\prod_{i=1}^n{F^{(i)}}\bigg) = \mathrm{Tr}\bigg( F^{(n)} \prod_{i=1}^{n-1}{F^{(i)}} \bigg) \tag{2.52} \]
+
+\(A \in \mathbb{R}^{m \times n}\), \(B \in \mathbb{R}^{n \times m}\)  
+\[ \mathrm{Tr}(AB) = \mathrm{Tr}(BA) \tag{2.53} \]
+
+though \(AB \in \mathbb{R}^{m \times m}\), \(BA \in \mathbb{R}^{n \times n}\)
 
 
 ## 02.11. The Determinant
