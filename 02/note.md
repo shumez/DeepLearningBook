@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:20:7
-Modified: 	2019-06-02 20:54:19
+Modified: 	2019-06-03 10:53:20
 -----
 Copyright (c) 2019 shumez
 -->
@@ -307,11 +307,26 @@ np.linalg.multi_dot([V, np.diag(l), np.linalg.inv(V)])
 	\end{align*}
 	\tag{2.41} 
 \]
+  
+eigenvectors, orthogonal mat \(\mathbf{Q}\) of \(\mathbf{A}\),  
+eigenvalues, diagonal mat \(\mathbf{\Lambda}\) of \(\mathbf{A}\)
 
-orthogonal mat \(\mathbf{Q}\), eigenvectors \(\mathbf{A}\), diagonal mat \(\mathbf{\Lambda}\)
+eigenvalue \(\mathbf{\Lambda}_{i,i}\) is associated w eigenvector \(\mathbf{Q}_{:,i}\)
 
-eigenvalue \(\mathbf{\Lambda}_{i,i}\) is associated w/ eigenvector \(\mathbf{Q}_{:,i}\)
+\(f(\mathbf{x}) = \mathbf{x}^T \mathbf{A x}\) (\(||\mathbf{x}|| = 1\))
 
+
+* **positive definite**: mat whose eigenval are all positive
+* **positive semidefinite**: eigenvals are all positive / zero
+* **negative definite**: eigenvals all negative
+* **negative semidefinite**: eigenvals negative / zero
+
+
+positive semideginite mat   
+\(\forall\mathbf{x}, \mathbf{x}^T \mathbf{Ax} \ge 0\)
+
+positive definite mat  
+\(\mathbf{x}^T \mathbf{Ax} = 0 \Rightarrow \mathbf{x} = 0\)
 
 ## 02.08. Singular Value Decomposition
 
