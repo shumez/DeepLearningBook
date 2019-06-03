@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:20:7
-Modified: 	2019-06-03 13:50:10
+Modified: 	2019-06-03 13:53:49
 -----
 Copyright (c) 2019 shumez
 -->
@@ -171,9 +171,9 @@ is also solution for any real \(\alpha\)
 
 for \(p \in \mathbb{R}\), \(p \ge 1\)
 
-* \(f(\mathbf{x}) = 0\) &rArr; \(x=0\)
-* \(f(\mathbf{x} + \mathbf{y}) \le f(\mathbf{x}) + f(\mathbf{y})\) (**triangle inequality**)
-* \(\forall\alpha \in \mathbb{R}\), \(f(\alpha \mathbf{x}) = |\alpha| f(x)\)
+* \(f(x) = 0\) &rArr; \(x=0\)
+* \(f(x + y) \le f(x) + f(y)\) (**triangle inequality**)
+* \(\forall\alpha \in \mathbb{R}\), \(f(\alpha x) = |\alpha| f(x)\)
 
 \(L^2\) norm, with \(p=2\) ka **Euclidean norm** (\(||x||\))
 
@@ -187,12 +187,12 @@ for \(p \in \mathbb{R}\), \(p \ge 1\)
 
 **Frobenius norm**
 
-\[ ||A||_F = \sqrt{\sum_{i,j}{\mathbf{A}_{i,j}^2}} \tag{2.33} \]
+\[ ||A||_F = \sqrt{\sum_{i,j}{A_{i,j}^2}} \tag{2.33} \]
 is analogous to \(L^2\) norm of vec
 
-\[ \mathbf{x}^T \mathbf{y} = ||\mathbf{x}||_2 ||\mathbf{y}||_2 \cos{\theta} \tag{2.34} \]
+\[ x^T y = ||x||_2 ||y||_2 \cos{\theta} \tag{2.34} \]
 
-where \(\theta\) is angle between \(\mathbf{x}\), \(\mathbf{y}\)
+where \(\theta\) is angle between \(x\), \(y\)
 
 
 ## 02.06. Special Kinds of Matricesand Vectors
