@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:20:7
-Modified: 	2019-06-03 20:14:1
+Modified: 	2019-06-03 20:52:36
 -----
 Copyright (c) 2019 shumez
 -->
@@ -399,6 +399,35 @@ though \(AB \in \mathbb{R}^{m \times m}\), \(BA \in \mathbb{R}^{n \times n}\)
 
 
 ## 02.12. Example: Principal Components Analysis
+
+**principal components analysis** (PCA)
+
+\(m\) points \(\{ x^{(1)}, \ldots, x^{(m)} \}\) in \(\mathbb{R}^n\)
+
+lower-dim version  
+corresponding code vec \(c^{(i)} \in \mathbb{R}^l\)  
+\(l < n\)
+
+encoding fn \(f(x) = c\)  
+decoding fn \(x \approx g(f(x))\)
+
+
+map code back into \(\mathbb{R}^n\)  
+let \(g(c) = Dc\), where \(D \in \mathbb{R}^{n \times l}\)
+
+\(L^2\) norm:  
+\[ c^* \arg_c\min{||x - g(c)||_2} \tag{2.54} \]
+
+\[ c^* = \arg_c\min{||x - g(c)||_2^2} \tag{2.55} \]
+
+\[
+	\begin{align*} 
+		&(x - g(c))^T (x - g(c)) \tag{2.56} \\
+		&= x^T x - x^T g(c) - g(c)^T x + g(c)^T g(c) \tag{2.57} \\
+		&= x^T x - 2x^T g(c) + g(c)^T g(c) \tag{2.58}
+	\end{align*} 
+\]
+
 
 
 ##
