@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:20:7
-Modified: 	2019-06-03 13:57:44
+Modified: 	2019-06-03 14:02:48
 -----
 Copyright (c) 2019 shumez
 -->
@@ -78,44 +78,44 @@ def transposition
 ## 02.02. Multiplying Matrices and Vectors
 
 **matrix product**  
-\[ \mathbf{C} = \mathbf{AB} \tag{2.4} \]
+\[ C = AB \tag{2.4} \]
 \[ C_{i,j} = \sum_k{A_{i,k} B_{k,j}} \tag{2.5} \]
 
 **element-wise product** (aka, **Hadamard product**)  
-\[ \mathbf{C} = \mathbf{A} \odot \mathbf{B} \]
+\[ C = A \odot B \]
 \[ C_{i,j} = A_{i,j} B_{i,j} \]
 
 **dot product**: 
-\(\mathbf{x} \cdot \mathbf{y} = \mathbf{x}^T \mathbf{y}\)
+\(x \cdot y = x^T y\)
 
 
-\[ \mathbf{x}^T \mathbf{y} = \mathbf{y}^T \mathbf{x} \tag{2.8} \]
+\[ x^T y = y^T x \tag{2.8} \]
 
-\[ (\mathbf{AB})^T = \mathbf{B}^T \mathbf{A}^T \tag{2.9} \]
+\[ (AB)^T = B^T A^T \tag{2.9} \]
 
-\[ \mathbf{x}^T \mathbf{y} = (\mathbf{x}^T \mathbf{y})^T = \mathbf{y}^T \mathbf{x} \tag{2.10} \]
+\[ x^T y = (x^T y)^T = y^T x \tag{2.10} \]
 
 a system of linear equations:
 
-\[ \mathbf{Ax} = \mathbf{b} \tag{2.11} \]
+\[ Ax = b \tag{2.11} \]
 
-where \(\mathbf{A} \in \mathbb{R}^{m \times n}\), \(\mathbf{b} \in \mathbb{R}^m\), \(\mathbf{x} \in \mathbb{R}^n\)
+where \(A \in \mathbb{R}^{m \times n}\), \(b \in \mathbb{R}^m\), \(x \in \mathbb{R}^n\)
 
 \[
 	\begin{align*}
-		\mathbf{A}_{1,:} \mathbf{x} &= b_1 \tag{2.12} \\
-		\mathbf{A}_{2,:} \mathbf{x} &= b_2 \tag{2.13} \\
+		A_{1,:} x &= b_1 \tag{2.12} \\
+		A_{2,:} x &= b_2 \tag{2.13} \\
 		\vdots \tag{2.14} \\
-		\mathbf{A}_{m,:} \mathbf{x} &= b_m \tag{2.15} \\
+		A_{m,:} x &= b_m \tag{2.15} \\
 	\end{align*}
 \]
 
 \[ 
 	\begin{align*}
-		\mathbf{A}_{1,1} x_1 + \mathbf{A}_{1,2} x_2 + \cdots + \mathbf{A}_{1,n} x_n &= b_1 \tag{2.16} \\
-		\mathbf{A}_{2,1} x_1 + \mathbf{A}_{2,2} x_2 + \cdots + \mathbf{A}_{2,n} x_n &= b_2 \tag{2.17} \\
+		A_{1,1} x_1 + A_{1,2} x_2 + \cdots + A_{1,n} x_n &= b_1 \tag{2.16} \\
+		A_{2,1} x_1 + A_{2,2} x_2 + \cdots + A_{2,n} x_n &= b_2 \tag{2.17} \\
 		\vdots \tag{2.18} \\
-		\mathbf{A}_{m,1} x_1 + \mathbf{A}_{m,2} x_2 + \cdots + \mathbf{A}_{m,n} x_n &= b_m \tag{2.19} 
+		A_{m,1} x_1 + A_{m,2} x_2 + \cdots + A_{m,n} x_n &= b_m \tag{2.19} 
 	\end{align*}
 \]
 
