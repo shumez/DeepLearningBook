@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:20:7
-Modified: 	2019-06-03 13:38:28
+Modified: 	2019-06-03 13:40:34
 -----
 Copyright (c) 2019 shumez
 -->
@@ -312,8 +312,7 @@ eigenvalues, diagonal mat \(\Lambda\) of \(A\)
 
 eigenvalue \(\Lambda_{i,i}\) is associated w eigenvector \(Q_{:,i}\)
 
-\(f(x) = x^T Ax\)  
-(\(||x|| = 1\))
+\(f(x) = x^T Ax \quad (||x|| = 1)\)
 
 
 * **positive definite**: mat whose eigenval are all positive
