@@ -108,6 +108,11 @@
     </ul>
 	    </li>
           
+            <li class="toctree-l1">
+		
+    <a class="" href="../03/">03. Probability and Information Theory</a>
+	    </li>
+          
         </ul>
       </div>
       &nbsp;
@@ -145,7 +150,7 @@ Filename:   note.md
 Project:    /Users/shume/Developer/DeepLearningBook/02
 Author:     shumez <https://github.com/shumez>
 Created:    2019-05-30 18:20:7
-Modified:   2019-06-03 14:44:43
+Modified:   2019-06-03 20:55:1
 -----
 Copyright (c) 2019 shumez
 -->
@@ -512,9 +517,71 @@ eigenvalues, diagonal mat <script type="math/tex">\Lambda</script> of <script ty
 <p>
 <script type="math/tex; mode=display"> A^+ = V D^+ U^+ \tag{2.47} </script>
 </p>
+<p>~ <sub> ~ </sub> ~ <sub> ~ </sub> ~ <sub> ~ </sub> ~ <sub> ~ </sub> ~ <sub> ~ </sub> ~ <sub> ~ </sub> ~ <sub> ~ </sub> ~ <sub> ~ </sub> ~ <sub> ~ </sub> ~ <sub> ~ </sub> ~ <sub> ~ </sub> ~ <sub> ~ </sub> ~ <sub> ~ </sub> ~ <sub> ~ </sub> ~ <sub> ~ </sub> ~ <sub> ~ </sub></p>
 <h2 id="0210_the_trace_operator">02.10. The Trace Operator<a class="headerlink" href="#0210_the_trace_operator" title="Permanent link">&para;</a></h2>
+<p>
+<script type="math/tex; mode=display"> \mathrm{Tr}(A) = \sum_i{A_{i,i}} \tag{2.48} </script>
+</p>
+<p>Frobenius norm </p>
+<p>
+<script type="math/tex; mode=display"> ||A||_F = \sqrt{\mathrm{Tr}(A A^T)} \tag{2.49} </script>
+</p>
+<p>
+<script type="math/tex; mode=display"> \mathrm{Tr}(A) = \mathrm{Tr}(A^T) \tag{2.50} </script>
+</p>
+<p>
+<script type="math/tex; mode=display"> \mathrm{Tr}(ABC) = \mathrm{Tr}(CAB) = \mathrm{Tr}(BCA) \tag{2.51} </script>
+</p>
+<p>more generally</p>
+<p>
+<script type="math/tex; mode=display"> \mathrm{Tr}\bigg(\prod_{i=1}^n{F^{(i)}}\bigg) = \mathrm{Tr}\bigg( F^{(n)} \prod_{i=1}^{n-1}{F^{(i)}} \bigg) \tag{2.52} </script>
+</p>
+<p>
+<script type="math/tex">A \in \mathbb{R}^{m \times n}</script>, <script type="math/tex">B \in \mathbb{R}^{n \times m}</script>
+<br />
+<script type="math/tex; mode=display"> \mathrm{Tr}(AB) = \mathrm{Tr}(BA) \tag{2.53} </script>
+</p>
+<p>though <script type="math/tex">AB \in \mathbb{R}^{m \times m}</script>, <script type="math/tex">BA \in \mathbb{R}^{n \times n}</script>
+</p>
 <h2 id="0211_the_determinant">02.11. The Determinant<a class="headerlink" href="#0211_the_determinant" title="Permanent link">&para;</a></h2>
+<p>
+<script type="math/tex">\det{(A)}</script>
+</p>
 <h2 id="0212_example_principal_components_analysis">02.12. Example: Principal Components Analysis<a class="headerlink" href="#0212_example_principal_components_analysis" title="Permanent link">&para;</a></h2>
+<p><strong>principal components analysis</strong> (PCA)</p>
+<p>
+<script type="math/tex">m</script> points <script type="math/tex">\{ x^{(1)}, \ldots, x^{(m)} \}</script> in <script type="math/tex">\mathbb{R}^n</script>
+</p>
+<p>lower-dim version<br />
+corresponding code vec <script type="math/tex">c^{(i)} \in \mathbb{R}^l</script>
+<br />
+<script type="math/tex">l < n</script>
+</p>
+<p>encoding fn <script type="math/tex">f(x) = c</script>
+<br />
+decoding fn <script type="math/tex">x \approx g(f(x))</script>
+</p>
+<p>map code back into <script type="math/tex">\mathbb{R}^n</script>
+<br />
+let <script type="math/tex">g(c) = Dc</script>, where <script type="math/tex">D \in \mathbb{R}^{n \times l}</script>
+</p>
+<p>
+<script type="math/tex">L^2</script> norm:<br />
+<script type="math/tex; mode=display"> c^* \arg_c\min{||x - g(c)||_2} \tag{2.54} </script>
+</p>
+<p>
+<script type="math/tex; mode=display"> c^* = \arg_c\min{||x - g(c)||_2^2} \tag{2.55} </script>
+</p>
+<p>
+<script type="math/tex; mode=display">
+    \begin{align*} 
+        &(x - g(c))^T (x - g(c)) \tag{2.56} \\
+        &= x^T x - x^T g(c) - g(c)^T x + g(c)^T g(c) \tag{2.57} \\
+        &= x^T x - 2x^T g(c) + g(c)^T g(c) \tag{2.58}
+    \end{align*} 
+</script>
+</p>
+<p>~ <sub> ~ </sub> ~ <sub> ~ </sub> ~ <sub> ~ </sub> ~ <sub> ~ </sub> ~ <sub> ~ </sub> ~ <sub> ~ </sub> ~ <sub> ~ </sub> ~ <sub> ~ </sub> ~ <sub> ~ </sub> ~ <sub> ~ </sub> ~ <sub> ~ </sub> ~ <sub> ~ </sub> ~ <sub> ~ </sub> ~ <sub> ~ </sub> ~ <sub> ~ </sub> ~ <sub> ~ </sub></p>
 <h2 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <!-- toc -->
 
@@ -533,6 +600,8 @@ eigenvalues, diagonal mat <script type="math/tex">\Lambda</script> of <script ty
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../03/" class="btn btn-neutral float-right" title="03. Probability and Information Theory">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../01/" class="btn btn-neutral" title="01. Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -567,6 +636,8 @@ eigenvalues, diagonal mat <script type="math/tex">\Lambda</script> of <script ty
         <span><a href="../01/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
+        <span style="margin-left: 15px"><a href="../03/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
     </span>
 </div>
     <script>var base_url = '..';</script>
@@ -580,5 +651,5 @@ eigenvalues, diagonal mat <script type="math/tex">\Lambda</script> of <script ty
 
 <!--
 MkDocs version : 1.0.2
-Build Date UTC : 2019-06-03 05:45:41
+Build Date UTC : 2019-06-03 11:57:03
 -->
