@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:20:7
-Modified: 	2019-06-03 14:44:43
+Modified: 	2019-06-03 19:52:19
 -----
 Copyright (c) 2019 shumez
 -->
@@ -369,7 +369,7 @@ pseudoinverse of \(A\) is defined as
 
 \[ A^+ = V D^+ U^+ \tag{2.47} \]
 
-
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
 ## 02.10. The Trace Operator
 
