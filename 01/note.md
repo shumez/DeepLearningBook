@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/01
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:19:8
-Modified: 	2019-06-01 20:40:8
+Modified: 	2019-06-03 14:42:28
 -----
 Copyright (c) 2019 shumez
 -->
@@ -50,7 +50,7 @@ ancient Greece
 
 **artificial neural networks** (ANNs)
 
-\(f(\mathbf{x}, \mathbf{w}) = x_1 x_1 + \cdots + x_n w_n\)
+\(f(x, w) = x_1 x_1 + \cdots + x_n w_n\)
 
 **McCulloch-Pitts Neuron** ([McCulloch, Pitts, 1943][1943_Pitts_McCulloch])
 
@@ -66,10 +66,10 @@ limitation:
 connot learn the XOR fn  
 \[
 	\begin{cases}
-		f([0,1], \mathbf{w}) = 1 \\
-		f([1,0], \mathbf{w}) = 1 \\
-		f([1,1], \mathbf{w}) = 1 \\
-		f([0,0], \mathbf{w}) = 0 
+		f([0,1], w) = 1 \\
+		f([1,0], w) = 1 \\
+		f([1,1], w) = 1 \\
+		f([0,0], w) = 0 
 	\end{cases}
 \]
 
