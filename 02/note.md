@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:20:7
-Modified: 	2019-06-03 11:43:41
+Modified: 	2019-06-03 13:28:0
 -----
 Copyright (c) 2019 shumez
 -->
@@ -355,14 +355,14 @@ singular value decomposition
 
 \[
 	\begin{align*}
-		\mathbf{A x} &= \mathbf{y} \tag{2.44} \\
-		\mathbf{x} &= \mathbf{B y} \tag{2.45}
+		Ax &= y \tag{2.44} \\
+		x &= By \tag{2.45}
 	\end{align*}
 \]
 
 **Moore-Penrose pseudoinverse**
 
-\[ \mathbf{A}^+ = \lim_{\alpha \rightarrow 0}{(\mathbf{A}^T \mathbf{A} + \alpha \mathbf{I})^{-1} \mathbf{A}^T} \tag{2.46} \]
+\[  A^+ = \lim_{\alpha \rightarrow 0}{(A^T A + \alpha I)^{-1} A^T} \tag{2.46} \]
 
 
 ## 02.10. The Trace Operator
