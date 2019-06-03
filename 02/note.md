@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:20:7
-Modified: 	2019-06-03 13:40:34
+Modified: 	2019-06-03 13:50:10
 -----
 Copyright (c) 2019 shumez
 -->
@@ -221,7 +221,7 @@ np.matmul(np.diag(v), x)
 np.multiply(v, x)
 ```
 
-\[ \text{diag}(v)^{-1} = \text{diag}\Bigg( \bigg[\frac{1}{v_1}, \cdots \frac{1}{v_n} \bigg]^T \Bigg) \]
+\[ \text{diag}(v)^{-1} = \text{diag}\Bigg( \bigg[\frac{1}{v_1}, \ldots, \frac{1}{v_n} \bigg]^T \Bigg) \]
 
 ```py
 np.linalg.inv(diag_v)
@@ -230,22 +230,22 @@ np.diag([1/vi for vi in v])
 
 **symmetric** mat
 
-\[ \mathbf{A} = \mathbf{A}^T \tag{2.35} \]
+\[ A = A^T \tag{2.35} \]
 
 **unit vector**: vec w/ **unit norm**:
 
 \[ ||x||_2 = 1 \tag{2.36} \]
 
-vec \(\mathbf{x}\) and vec \(\mathbf{y}\) **orthogonal** to each other if \(\mathbf{x}^T \mathbf{y} = 0\)
+vec \(x\) and vec \(y\) **orthogonal** to each other if \(x^T y = 0\)
 
 orthogonal & unit norm **orthonormal**
 
 **orthogonal matrix**
 
-\[ \mathbf{A}^T \mathbf{A} = \mathbf{A}\mathbf{A}^T = \mathbf{I} \tag{2.37} \]
+\[ A^T A = A A^T = I \tag{2.37} \]
 
-implyies 
-\[ \mathbf{A}^{-1} = \mathbf{A}^T \tag{2.38} \]
+implies 
+\[ A^{-1} = A^T \tag{2.38} \]
 
 
 ```py
