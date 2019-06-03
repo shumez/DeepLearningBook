@@ -145,7 +145,7 @@ Filename:   note.md
 Project:    /Users/shume/Developer/DeepLearningBook/02
 Author:     shumez <https://github.com/shumez>
 Created:    2019-05-30 18:20:7
-Modified:   2019-06-02 20:54:19
+Modified:   2019-06-03 11:43:41
 -----
 Copyright (c) 2019 shumez
 -->
@@ -453,12 +453,59 @@ vec <script type="math/tex">\lambda</script>: <script type="math/tex">[\lambda_1
     \tag{2.41} 
 </script>
 </p>
-<p>orthogonal mat <script type="math/tex">\mathbf{Q}</script>, eigenvectors <script type="math/tex">\mathbf{A}</script>, diagonal mat <script type="math/tex">\mathbf{\Lambda}</script>
+<p>eigenvectors, orthogonal mat <script type="math/tex">\mathbf{Q}</script> of <script type="math/tex">\mathbf{A}</script>,<br />
+eigenvalues, diagonal mat <script type="math/tex">\mathbf{\Lambda}</script> of <script type="math/tex">\mathbf{A}</script>
 </p>
-<p>eigenvalue <script type="math/tex">\mathbf{\Lambda}_{i,i}</script> is associated w/ eigenvector <script type="math/tex">\mathbf{Q}_{:,i}</script>
+<p>eigenvalue <script type="math/tex">\mathbf{\Lambda}_{i,i}</script> is associated w eigenvector <script type="math/tex">\mathbf{Q}_{:,i}</script>
+</p>
+<p>
+<script type="math/tex">f(\mathbf{x}) = \mathbf{x}^T \mathbf{A x}</script> (<script type="math/tex">||\mathbf{x}|| = 1</script>)</p>
+<ul>
+<li><strong>positive definite</strong>: mat whose eigenval are all positive</li>
+<li><strong>positive semidefinite</strong>: eigenvals are all positive / zero</li>
+<li><strong>negative definite</strong>: eigenvals all negative</li>
+<li><strong>negative semidefinite</strong>: eigenvals negative / zero</li>
+</ul>
+<p>positive semideginite mat <br />
+<script type="math/tex">\forall\mathbf{x}, \mathbf{x}^T \mathbf{Ax} \ge 0</script>
+</p>
+<p>positive definite mat<br />
+<script type="math/tex">\mathbf{x}^T \mathbf{Ax} = 0 \Rightarrow \mathbf{x} = 0</script>
 </p>
 <h2 id="0208_singular_value_decomposition">02.08. Singular Value Decomposition<a class="headerlink" href="#0208_singular_value_decomposition" title="Permanent link">&para;</a></h2>
+<p><strong>singular value decomposition</strong> (SVD)<br />
+<strong>singular vecs</strong>, <strong>singular vals</strong></p>
+<pre><code class="py">u, s, vh = np.linalg.svd(A, full_matrices=False)
+</code></pre>
+
+<p>eigendecomposition
+<script type="math/tex; mode=display"> \mathbf{A} = \mathbf{V} \text{diag}(\mathbf{\lambda}) \mathbf{V}^{-1} \tag{2.42} </script>
+</p>
+<p>singular value decomposition
+<script type="math/tex; mode=display"> \mathbf{A} = \mathbf{U D V}^T \tag{2.43} </script>
+</p>
+<p>
+<script type="math/tex">\mathbf{A}</script>
+<script type="math/tex">m \times n</script> mat<br />
+<strong>left-singular vec</strong> <script type="math/tex">\mathbf{U}</script>
+<script type="math/tex">m \times m</script> orthogonal mat<br />
+<strong>singular values</strong> <script type="math/tex">\mathbf{D}</script>
+<script type="math/tex">m \times n</script> diagonal mat<br />
+<strong>right-singular vec</strong> <script type="math/tex">\mathbf{V}</script>
+<script type="math/tex">n \times n</script> orthogonal mat</p>
 <h2 id="0209_the_moore-penrose_pseudoinverse">02.09. The Moore-Penrose Pseudoinverse<a class="headerlink" href="#0209_the_moore-penrose_pseudoinverse" title="Permanent link">&para;</a></h2>
+<p>
+<script type="math/tex; mode=display">
+    \begin{align*}
+        \mathbf{A x} &= \mathbf{y} \tag{2.44} \\
+        \mathbf{x} &= \mathbf{B y} \tag{2.45}
+    \end{align*}
+</script>
+</p>
+<p><strong>Moore-Penrose pseudoinverse</strong></p>
+<p>
+<script type="math/tex; mode=display"> \mathbf{A}^+ = \lim_{\alpha \rightarrow 0}{(\mathbf{A}^T \mathbf{A} + \alpha \mathbf{I})^{-1} \mathbf{A}^T} \tag{2.46} </script>
+</p>
 <h2 id="0210_the_trace_operator">02.10. The Trace Operator<a class="headerlink" href="#0210_the_trace_operator" title="Permanent link">&para;</a></h2>
 <h2 id="0211_the_determinant">02.11. The Determinant<a class="headerlink" href="#0211_the_determinant" title="Permanent link">&para;</a></h2>
 <h2 id="0212_example_principal_components_analysis">02.12. Example: Principal Components Analysis<a class="headerlink" href="#0212_example_principal_components_analysis" title="Permanent link">&para;</a></h2>
@@ -527,5 +574,5 @@ vec <script type="math/tex">\lambda</script>: <script type="math/tex">[\lambda_1
 
 <!--
 MkDocs version : 1.0.2
-Build Date UTC : 2019-06-02 12:06:59
+Build Date UTC : 2019-06-03 02:48:32
 -->
