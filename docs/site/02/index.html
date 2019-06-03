@@ -145,7 +145,7 @@ Filename:   note.md
 Project:    /Users/shume/Developer/DeepLearningBook/02
 Author:     shumez <https://github.com/shumez>
 Created:    2019-05-30 18:20:7
-Modified:   2019-06-03 11:43:41
+Modified:   2019-06-03 14:08:33
 -----
 Copyright (c) 2019 shumez
 -->
@@ -173,12 +173,12 @@ Copyright (c) 2019 shumez
 <h2 id="0201_scalars_vectors_matrices_and_tensors">02.01. Scalars, Vectors, Matrices and Tensors<a class="headerlink" href="#0201_scalars_vectors_matrices_and_tensors" title="Permanent link">&para;</a></h2>
 <ul>
 <li>scalars</li>
-<li>vectors: <script type="math/tex">\mathbf{x}</script>
+<li>vectors: <script type="math/tex">x</script>
 </li>
 </ul>
 <p>
 <script type="math/tex; mode=display">
-    \mathbf{x} = 
+    x = 
     \begin{bmatrix}
         x_1 \\ x_2 \\ \vdots \\ x_n
     \end{bmatrix}
@@ -186,17 +186,17 @@ Copyright (c) 2019 shumez
 </script>
 </p>
 <ul>
-<li>matrices: <script type="math/tex">\mathbf{A}</script>
+<li>matrices: <script type="math/tex">A</script>
 </li>
 </ul>
 <p>
 <script type="math/tex; mode=display">
-    \mathbf{A} = 
+    A = 
     \begin{bmatrix}
         A_{1,1} & A_{1,2} \\
         A_{2,1} & A_{2,2} \\
         A_{3,1} & A_{3,2}
-    \end{bmatrix} \Rightarrow \mathbf{A}^T =
+    \end{bmatrix} \Rightarrow A^T =
     \begin{bmatrix}
         A_{1,1} & A_{2,1} & A_{3,1} \\
         A_{1,2} & A_{2,2} & A_{3,2}
@@ -211,102 +211,102 @@ Copyright (c) 2019 shumez
 <script type="math/tex">A_{i, j, k}</script>
 </p>
 <p>def transposition
-<script type="math/tex; mode=display"> (\mathbf{A}^T)_{i,j} = \mathbf{A}_{j,i} \tag{2.3} </script>
+<script type="math/tex; mode=display"> (A^T)_{i,j} = A_{j,i} \tag{2.3} </script>
 </p>
 <p>
-<script type="math/tex">\mathbf{C} = \mathbf{A} + \mathbf{B}</script> where <script type="math/tex">C_{i,j} = A_{i,j} + B_{i,j}</script>
+<script type="math/tex">C = A + B</script> where <script type="math/tex">C_{i,j} = A_{i,j} + B_{i,j}</script>
 </p>
 <p>
-<script type="math/tex">\mathbf{D} = a \cdot \mathbf{B} + c</script> where <script type="math/tex">D_{i,j} = a \cdot B_{i,j} + c</script>
+<script type="math/tex">D = a \cdot B + c</script> where <script type="math/tex">D_{i,j} = a \cdot B_{i,j} + c</script>
 </p>
 <p>
-<script type="math/tex">\mathbf{C} = \mathbf{A} + \mathbf{b}</script> where <script type="math/tex">C_{i,j} = A_{i,j} + b_j</script>
+<script type="math/tex">C = A + b</script> where <script type="math/tex">C_{i,j} = A_{i,j} + b_j</script>
 <br />
 <strong>broadacsting</strong></p>
 <h2 id="0202_multiplying_matrices_and_vectors">02.02. Multiplying Matrices and Vectors<a class="headerlink" href="#0202_multiplying_matrices_and_vectors" title="Permanent link">&para;</a></h2>
 <p><strong>matrix product</strong><br />
-<script type="math/tex; mode=display"> \mathbf{C} = \mathbf{AB} \tag{2.4} </script>
+<script type="math/tex; mode=display"> C = AB \tag{2.4} </script>
 <script type="math/tex; mode=display"> C_{i,j} = \sum_k{A_{i,k} B_{k,j}} \tag{2.5} </script>
 </p>
 <p><strong>element-wise product</strong> (aka, <strong>Hadamard product</strong>)<br />
-<script type="math/tex; mode=display"> \mathbf{C} = \mathbf{A} \odot \mathbf{B} </script>
+<script type="math/tex; mode=display"> C = A \odot B </script>
 <script type="math/tex; mode=display"> C_{i,j} = A_{i,j} B_{i,j} </script>
 </p>
 <p><strong>dot product</strong>: 
-<script type="math/tex">\mathbf{x} \cdot \mathbf{y} = \mathbf{x}^T \mathbf{y}</script>
+<script type="math/tex">x \cdot y = x^T y</script>
 </p>
 <p>
-<script type="math/tex; mode=display"> \mathbf{x}^T \mathbf{y} = \mathbf{y}^T \mathbf{x} \tag{2.8} </script>
+<script type="math/tex; mode=display"> x^T y = y^T x \tag{2.8} </script>
 </p>
 <p>
-<script type="math/tex; mode=display"> (\mathbf{AB})^T = \mathbf{B}^T \mathbf{A}^T \tag{2.9} </script>
+<script type="math/tex; mode=display"> (AB)^T = B^T A^T \tag{2.9} </script>
 </p>
 <p>
-<script type="math/tex; mode=display"> \mathbf{x}^T \mathbf{y} = (\mathbf{x}^T \mathbf{y})^T = \mathbf{y}^T \mathbf{x} \tag{2.10} </script>
+<script type="math/tex; mode=display"> x^T y = (x^T y)^T = y^T x \tag{2.10} </script>
 </p>
 <p>a system of linear equations:</p>
 <p>
-<script type="math/tex; mode=display"> \mathbf{Ax} = \mathbf{b} \tag{2.11} </script>
+<script type="math/tex; mode=display"> Ax = b \tag{2.11} </script>
 </p>
-<p>where <script type="math/tex">\mathbf{A} \in \mathbb{R}^{m \times n}</script>, <script type="math/tex">\mathbf{b} \in \mathbb{R}^m</script>, <script type="math/tex">\mathbf{x} \in \mathbb{R}^n</script>
+<p>where <script type="math/tex">A \in \mathbb{R}^{m \times n}</script>, <script type="math/tex">b \in \mathbb{R}^m</script>, <script type="math/tex">x \in \mathbb{R}^n</script>
 </p>
 <p>
 <script type="math/tex; mode=display">
     \begin{align*}
-        \mathbf{A}_{1,:} \mathbf{x} &= b_1 \tag{2.12} \\
-        \mathbf{A}_{2,:} \mathbf{x} &= b_2 \tag{2.13} \\
+        A_{1,:} x &= b_1 \tag{2.12} \\
+        A_{2,:} x &= b_2 \tag{2.13} \\
         \vdots \tag{2.14} \\
-        \mathbf{A}_{m,:} \mathbf{x} &= b_m \tag{2.15} \\
+        A_{m,:} x &= b_m \tag{2.15} \\
     \end{align*}
 </script>
 </p>
 <p>
 <script type="math/tex; mode=display"> 
     \begin{align*}
-        \mathbf{A}_{1,1} x_1 + \mathbf{A}_{1,2} x_2 + \cdots + \mathbf{A}_{1,n} x_n &= b_1 \tag{2.16} \\
-        \mathbf{A}_{2,1} x_1 + \mathbf{A}_{2,2} x_2 + \cdots + \mathbf{A}_{2,n} x_n &= b_2 \tag{2.17} \\
+        A_{1,1} x_1 + A_{1,2} x_2 + \cdots + A_{1,n} x_n &= b_1 \tag{2.16} \\
+        A_{2,1} x_1 + A_{2,2} x_2 + \cdots + A_{2,n} x_n &= b_2 \tag{2.17} \\
         \vdots \tag{2.18} \\
-        \mathbf{A}_{m,1} x_1 + \mathbf{A}_{m,2} x_2 + \cdots + \mathbf{A}_{m,n} x_n &= b_m \tag{2.19} 
+        A_{m,1} x_1 + A_{m,2} x_2 + \cdots + A_{m,n} x_n &= b_m \tag{2.19} 
     \end{align*}
 </script>
 </p>
 <h2 id="0203_identity_and_inverse_matrices">02.03. Identity and Inverse Matrices<a class="headerlink" href="#0203_identity_and_inverse_matrices" title="Permanent link">&para;</a></h2>
 <p><strong>matrix inversion</strong></p>
-<p><strong>identity matrix</strong> <script type="math/tex">\mathbf{I}_n \in \mathbb{R}^{n \times n}</script>
+<p><strong>identity matrix</strong> <script type="math/tex">I_n \in \mathbb{R}^{n \times n}</script>
 </p>
 <p>
-<script type="math/tex; mode=display"> \forall\mathbf{x} \in \mathbb{R}^n, \mathbf{I}_n \mathbf{x} = \mathbf{x} \tag{2.20} </script>
+<script type="math/tex; mode=display"> \forall x \in \mathbb{R}^n, \quad I_n x = x \tag{2.20} </script>
 </p>
 <p>
-<script type="math/tex; mode=display"> \mathbf{A}^{-1} \mathbf{A} = \mathbf{I}_n \tag{2.21} </script>
+<script type="math/tex; mode=display"> A^{-1} A = I_n \tag{2.21} </script>
 </p>
 <h2 id="0204_linear_dependence_and_span">02.04. Linear Dependence and Span<a class="headerlink" href="#0204_linear_dependence_and_span" title="Permanent link">&para;</a></h2>
-<p>in order for <script type="math/tex">\mathbf{A}^{-1}</script> to exist</p>
+<p>in order for <script type="math/tex">A^{-1}</script> to exist</p>
 <p>
-<script type="math/tex; mode=display"> \mathbf{Ax} = \mathbf{b} \tag{2.11} </script>
+<script type="math/tex; mode=display"> Ax = b \tag{2.11} </script>
 </p>
 <p>eq.2.11 must have one solution</p>
 <p>possible to have no solution / infinitely many solutions<br />
 <strong>NOT</strong> possible to have more than 1 but less than infinitely solutions</p>
-<p>if both <script type="math/tex">\mathbf{x}</script> and <script type="math/tex">\mathbf{y}</script> are solutions then</p>
+<p>if both <script type="math/tex">x</script> and <script type="math/tex">y</script> are solutions then</p>
 <p>
-<script type="math/tex; mode=display"> \mathbf{z} = \alpha \mathbf{x} + (1 - \alpha) \mathbf{y} \tag{2.26} </script>
+<script type="math/tex; mode=display"> z = \alpha x + (1 - \alpha) y \tag{2.26} </script>
 </p>
 <p>is also solution for any real <script type="math/tex">\alpha</script>
 </p>
 <p>
-<script type="math/tex; mode=display"> \mathbf{Ax} = \sum_i{x_i \mathbf{A}_{:,i}} \tag{2.27} </script>
+<script type="math/tex; mode=display"> Ax = \sum_i{x_i A_{:,i}} \tag{2.27} </script>
 </p>
 <p><strong>linear combination</strong></p>
 <p>
-<script type="math/tex">\{ \mathbf{v}^{(1)}, \cdots, \mathbf{v}^{(n)} \}</script>
+<script type="math/tex">\{ v^{(1)}, \cdots, v^{(n)} \}</script>
 </p>
 <p>
-<script type="math/tex; mode=display"> \sum_i{c_i \mathbf{v}^{(i)}} \tag{2.28} </script>
+<script type="math/tex; mode=display"> \sum_i{c_i v^{(i)}} \tag{2.28} </script>
 </p>
 <p><strong>span</strong> </p>
 <p>
-<script type="math/tex">\mathbf{Ax} = \mathbf{b}</script> have solution for all vals of <script type="math/tex">\mathbf{b} \in \mathbb{R}^m</script>
+<script type="math/tex">Ax = b</script> have solution for all vals of <script type="math/tex">b \in \mathbb{R}^m</script>
 </p>
 <h2 id="0205_norms">02.05. Norms<a class="headerlink" href="#0205_norms" title="Permanent link">&para;</a></h2>
 <p><strong>norm</strong>: fn that measure size of vectors </p>
@@ -319,12 +319,12 @@ Copyright (c) 2019 shumez
 </p>
 <ul>
 <li>
-<script type="math/tex">f(\mathbf{x}) = 0</script> &rArr; <script type="math/tex">x=0</script>
+<script type="math/tex">f(x) = 0</script> &rArr; <script type="math/tex">x=0</script>
 </li>
 <li>
-<script type="math/tex">f(\mathbf{x} + \mathbf{y}) \le f(\mathbf{x}) + f(\mathbf{y})</script> (<strong>triangle inequality</strong>)</li>
+<script type="math/tex">f(x + y) \le f(x) + f(y)</script> (<strong>triangle inequality</strong>)</li>
 <li>
-<script type="math/tex">\forall\alpha \in \mathbb{R}</script>, <script type="math/tex">f(\alpha \mathbf{x}) = |\alpha| f(x)</script>
+<script type="math/tex">\forall\alpha \in \mathbb{R}</script>, <script type="math/tex">f(\alpha x) = |\alpha| f(x)</script>
 </li>
 </ul>
 <p>
@@ -341,15 +341,15 @@ Copyright (c) 2019 shumez
 </p>
 <p><strong>Frobenius norm</strong></p>
 <p>
-<script type="math/tex; mode=display"> ||A||_F = \sqrt{\sum_{i,j}{\mathbf{A}_{i,j}^2}} \tag{2.33} </script>
+<script type="math/tex; mode=display"> ||A||_F = \sqrt{\sum_{i,j}{A_{i,j}^2}} \tag{2.33} </script>
 is analogous to <script type="math/tex">L^2</script> norm of vec</p>
 <p>
-<script type="math/tex; mode=display"> \mathbf{x}^T \mathbf{y} = ||\mathbf{x}||_2 ||\mathbf{y}||_2 \cos{\theta} \tag{2.34} </script>
+<script type="math/tex; mode=display"> x^T y = ||x||_2 ||y||_2 \cos{\theta} \tag{2.34} </script>
 </p>
-<p>where <script type="math/tex">\theta</script> is angle between <script type="math/tex">\mathbf{x}</script>, <script type="math/tex">\mathbf{y}</script>
+<p>where <script type="math/tex">\theta</script> is angle between <script type="math/tex">x</script>, <script type="math/tex">y</script>
 </p>
 <h2 id="0206_special_kinds_of_matricesand_vectors">02.06. Special Kinds of Matricesand Vectors<a class="headerlink" href="#0206_special_kinds_of_matricesand_vectors" title="Permanent link">&para;</a></h2>
-<p><strong>diagonal</strong> <script type="math/tex">\mathbf{D}</script>
+<p><strong>diagonal</strong> <script type="math/tex">D</script>
 <br />
 if and only if <script type="math/tex">D_{i,j}=0</script> for all <script type="math/tex">i \ne j</script>
 </p>
@@ -366,7 +366,7 @@ np.diag(v)
 </code></pre>
 
 <p>
-<script type="math/tex; mode=display"> \text{diag}(\mathbf{v}) \mathbf{x} = \mathbf{v} \odot \mathbf{x} </script>
+<script type="math/tex; mode=display"> \text{diag}(v) x = v \odot x </script>
 </p>
 <pre><code class="py">np.matmul(np.diag(v), x)
 
@@ -374,7 +374,7 @@ np.multiply(v, x)
 </code></pre>
 
 <p>
-<script type="math/tex; mode=display"> \text{diag}(\mathbf{v})^{-1} = \text{diag}\Bigg( \bigg[\frac{1}{v_1}, \cdots \frac{1}{v_n} \bigg]^T \Bigg) </script>
+<script type="math/tex; mode=display"> \text{diag}(v)^{-1} = \text{diag}\Bigg( \bigg[\frac{1}{v_1}, \ldots, \frac{1}{v_n} \bigg]^T \Bigg) </script>
 </p>
 <pre><code class="py">np.linalg.inv(diag_v)
 np.diag([1/vi for vi in v])
@@ -382,22 +382,22 @@ np.diag([1/vi for vi in v])
 
 <p><strong>symmetric</strong> mat</p>
 <p>
-<script type="math/tex; mode=display"> \mathbf{A} = \mathbf{A}^T \tag{2.35} </script>
+<script type="math/tex; mode=display"> A = A^T \tag{2.35} </script>
 </p>
 <p><strong>unit vector</strong>: vec w/ <strong>unit norm</strong>:</p>
 <p>
 <script type="math/tex; mode=display"> ||x||_2 = 1 \tag{2.36} </script>
 </p>
-<p>vec <script type="math/tex">\mathbf{x}</script> and vec <script type="math/tex">\mathbf{y}</script>
-<strong>orthogonal</strong> to each other if <script type="math/tex">\mathbf{x}^T \mathbf{y} = 0</script>
+<p>vec <script type="math/tex">x</script> and vec <script type="math/tex">y</script>
+<strong>orthogonal</strong> to each other if <script type="math/tex">x^T y = 0</script>
 </p>
 <p>orthogonal &amp; unit norm <strong>orthonormal</strong></p>
 <p><strong>orthogonal matrix</strong></p>
 <p>
-<script type="math/tex; mode=display"> \mathbf{A}^T \mathbf{A} = \mathbf{A}\mathbf{A}^T = \mathbf{I} \tag{2.37} </script>
+<script type="math/tex; mode=display"> A^T A = A A^T = I \tag{2.37} </script>
 </p>
-<p>implyies 
-<script type="math/tex; mode=display"> \mathbf{A}^{-1} = \mathbf{A}^T \tag{2.38} </script>
+<p>implies 
+<script type="math/tex; mode=display"> A^{-1} = A^T \tag{2.38} </script>
 </p>
 <pre><code class="py">from scipy.stats import ortho_group
 
@@ -409,8 +409,8 @@ AT_A = np.matmul(A, A.T)
 
 <h2 id="0207_eigendecomposition">02.07. Eigendecomposition<a class="headerlink" href="#0207_eigendecomposition" title="Permanent link">&para;</a></h2>
 <p><strong>eigendecomposition</strong>: into set of eigenvectors &amp; eigenvalues</p>
-<p><strong>eigenvector</strong> of square mat <script type="math/tex">\mathbf{A}</script> is non-zero vec <script type="math/tex">\mathbf{v}</script>
-<script type="math/tex; mode=display"> \mathbf{A}\mathbf{v} = \lambda \mathbf{v} \tag{2.39} </script>
+<p><strong>eigenvector</strong> of square mat <script type="math/tex">A</script> is non-zero vec <script type="math/tex">v</script>
+<script type="math/tex; mode=display"> Av = \lambda v \tag{2.39} </script>
 </p>
 <p><strong>eigenvalue</strong> <script type="math/tex">\lambda</script>
 </p>
@@ -418,15 +418,15 @@ AT_A = np.matmul(A, A.T)
 </code></pre>
 
 <p><a href="https://raw.githubusercontent.com/shumez/DeepLearningBook/master/02/fig/0203.png"><img alt="Fig.2.3" src="https://raw.githubusercontent.com/shumez/DeepLearningBook/master/02/fig/0203.png" /></a></p>
-<p>mat <script type="math/tex">\mathbf{A}</script> has <script type="math/tex">n</script> linearly independent eigenvec <script type="math/tex">\{ \mathbf{v}^{(1)}, \cdots, \mathbf{v}^{(n)} \}</script>,
+<p>mat <script type="math/tex">A</script> has <script type="math/tex">n</script> linearly independent eigenvec <script type="math/tex">\{ v^{(1)}, \cdots, v^{(n)} \}</script>,
 w/ corresponding eigenval <script type="math/tex">\{ \lambda_1, \cdots, \lambda_n \}</script>
 </p>
-<p>mat <script type="math/tex">\mathbf{V}</script>: <script type="math/tex">\mathbf{V} = [ \mathbf{v}^{(1)}, \cdots, \mathbf{v}^{(b)} ] </script>,<br />
+<p>mat <script type="math/tex">V</script>: <script type="math/tex">V = [ v^{(1)}, \cdots, v^{(b)} ] </script>,<br />
 vec <script type="math/tex">\lambda</script>: <script type="math/tex">[\lambda_1, \cdots, \lambda_n]^T</script>
 </p>
 <p><strong>eigendecomposition</strong></p>
 <p>
-<script type="math/tex; mode=display"> \mathbf{A} = \mathbf{V} \text{diag}(\lambda) \mathbf{V}^{-1} \tag{2.40} </script>
+<script type="math/tex; mode=display"> A = V\text{diag}(\lambda) V^{-1} \tag{2.40} </script>
 </p>
 <pre><code class="py">np.linalg.multi_dot([V, np.diag(l), np.linalg.inv(V)])
 </code></pre>
@@ -434,11 +434,10 @@ vec <script type="math/tex">\lambda</script>: <script type="math/tex">[\lambda_1
 <p>
 <script type="math/tex; mode=display">
     \begin{align*}
-        \mathbf{A} 
-        &= \mathbf{Q \Lambda Q}^T \\
+        A &= Q \Lambda Q^T \\
         &= 
         \begin{bmatrix}
-            \mathbf{v}_1 & \mathbf{v}_2 & \cdots & \mathbf{v}_n
+            v_1 & v_2 & \cdots & v_n
         \end{bmatrix}
         \begin{bmatrix}
             \lambda_1 & 0 & \cdots & 0 \\
@@ -447,19 +446,20 @@ vec <script type="math/tex">\lambda</script>: <script type="math/tex">[\lambda_1
             0 & 0 & \cdots & \lambda_n 
         \end{bmatrix}
         \begin{bmatrix}
-            \mathbf{v}_1 \\ \mathbf{v}_2 \\ \vdots \\ \mathbf{v}_n
+            v_1 \\ v_2 \\ \vdots \\ v_n
         \end{bmatrix}
     \end{align*}
     \tag{2.41} 
 </script>
 </p>
-<p>eigenvectors, orthogonal mat <script type="math/tex">\mathbf{Q}</script> of <script type="math/tex">\mathbf{A}</script>,<br />
-eigenvalues, diagonal mat <script type="math/tex">\mathbf{\Lambda}</script> of <script type="math/tex">\mathbf{A}</script>
+<p>eigenvectors, orthogonal mat <script type="math/tex">Q</script> of <script type="math/tex">A</script>,<br />
+eigenvalues, diagonal mat <script type="math/tex">\Lambda</script> of <script type="math/tex">A</script>
 </p>
-<p>eigenvalue <script type="math/tex">\mathbf{\Lambda}_{i,i}</script> is associated w eigenvector <script type="math/tex">\mathbf{Q}_{:,i}</script>
+<p>eigenvalue <script type="math/tex">\Lambda_{i,i}</script> is associated w eigenvector <script type="math/tex">Q_{:,i}</script>
 </p>
 <p>
-<script type="math/tex">f(\mathbf{x}) = \mathbf{x}^T \mathbf{A x}</script> (<script type="math/tex">||\mathbf{x}|| = 1</script>)</p>
+<script type="math/tex">f(x) = x^T Ax \quad (||x|| = 1)</script>
+</p>
 <ul>
 <li><strong>positive definite</strong>: mat whose eigenval are all positive</li>
 <li><strong>positive semidefinite</strong>: eigenvals are all positive / zero</li>
@@ -467,10 +467,10 @@ eigenvalues, diagonal mat <script type="math/tex">\mathbf{\Lambda}</script> of <
 <li><strong>negative semidefinite</strong>: eigenvals negative / zero</li>
 </ul>
 <p>positive semideginite mat <br />
-<script type="math/tex">\forall\mathbf{x}, \mathbf{x}^T \mathbf{Ax} \ge 0</script>
+<script type="math/tex">\forall x, x^T Ax \ge 0</script>
 </p>
 <p>positive definite mat<br />
-<script type="math/tex">\mathbf{x}^T \mathbf{Ax} = 0 \Rightarrow \mathbf{x} = 0</script>
+<script type="math/tex">x^T Ax = 0 \Rightarrow x = 0</script>
 </p>
 <h2 id="0208_singular_value_decomposition">02.08. Singular Value Decomposition<a class="headerlink" href="#0208_singular_value_decomposition" title="Permanent link">&para;</a></h2>
 <p><strong>singular value decomposition</strong> (SVD)<br />
@@ -479,32 +479,32 @@ eigenvalues, diagonal mat <script type="math/tex">\mathbf{\Lambda}</script> of <
 </code></pre>
 
 <p>eigendecomposition
-<script type="math/tex; mode=display"> \mathbf{A} = \mathbf{V} \text{diag}(\mathbf{\lambda}) \mathbf{V}^{-1} \tag{2.42} </script>
+<script type="math/tex; mode=display"> A = V \text{diag}(\lambda) V^{-1} \tag{2.42} </script>
 </p>
 <p>singular value decomposition
-<script type="math/tex; mode=display"> \mathbf{A} = \mathbf{U D V}^T \tag{2.43} </script>
+<script type="math/tex; mode=display"> A = UDV^T \tag{2.43} </script>
 </p>
 <p>
-<script type="math/tex">\mathbf{A}</script>
+<script type="math/tex">A</script>
 <script type="math/tex">m \times n</script> mat<br />
-<strong>left-singular vec</strong> <script type="math/tex">\mathbf{U}</script>
+<strong>left-singular vec</strong> <script type="math/tex">U</script>
 <script type="math/tex">m \times m</script> orthogonal mat<br />
-<strong>singular values</strong> <script type="math/tex">\mathbf{D}</script>
+<strong>singular values</strong> <script type="math/tex">D</script>
 <script type="math/tex">m \times n</script> diagonal mat<br />
-<strong>right-singular vec</strong> <script type="math/tex">\mathbf{V}</script>
+<strong>right-singular vec</strong> <script type="math/tex">V</script>
 <script type="math/tex">n \times n</script> orthogonal mat</p>
 <h2 id="0209_the_moore-penrose_pseudoinverse">02.09. The Moore-Penrose Pseudoinverse<a class="headerlink" href="#0209_the_moore-penrose_pseudoinverse" title="Permanent link">&para;</a></h2>
 <p>
 <script type="math/tex; mode=display">
     \begin{align*}
-        \mathbf{A x} &= \mathbf{y} \tag{2.44} \\
-        \mathbf{x} &= \mathbf{B y} \tag{2.45}
+        Ax &= y \tag{2.44} \\
+        x &= By \tag{2.45}
     \end{align*}
 </script>
 </p>
-<p><strong>Moore-Penrose pseudoinverse</strong></p>
-<p>
-<script type="math/tex; mode=display"> \mathbf{A}^+ = \lim_{\alpha \rightarrow 0}{(\mathbf{A}^T \mathbf{A} + \alpha \mathbf{I})^{-1} \mathbf{A}^T} \tag{2.46} </script>
+<p><strong>Moore-Penrose pseudoinverse</strong>
+<script type="math/tex; mode=display">  </script>
+<script type="math/tex; mode=display">  A^+ = \lim\limits_{\alpha \to 0} (A^T A + \alpha I)^{-1} A^T \tag{2.46} </script>
 </p>
 <h2 id="0210_the_trace_operator">02.10. The Trace Operator<a class="headerlink" href="#0210_the_trace_operator" title="Permanent link">&para;</a></h2>
 <h2 id="0211_the_determinant">02.11. The Determinant<a class="headerlink" href="#0211_the_determinant" title="Permanent link">&para;</a></h2>
@@ -574,5 +574,5 @@ eigenvalues, diagonal mat <script type="math/tex">\mathbf{\Lambda}</script> of <
 
 <!--
 MkDocs version : 1.0.2
-Build Date UTC : 2019-06-03 02:48:32
+Build Date UTC : 2019-06-03 05:10:43
 -->
