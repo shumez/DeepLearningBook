@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:20:7
-Modified: 	2019-06-03 14:04:53
+Modified: 	2019-06-03 14:44:43
 -----
 Copyright (c) 2019 shumez
 -->
@@ -359,9 +359,16 @@ singular value decomposition
 	\end{align*}
 \]
 
+left-inverse \(B\) of mat \(A\)
+
 **Moore-Penrose pseudoinverse**
 
-\[  A^+ = \lim_{\alpha \rightarrow 0}{(A^T A + \alpha I)^{-1} A^T} \tag{2.46} \]
+pseudoinverse of \(A\) is defined as 
+
+\[  A^+ = \lim\limits_{\alpha \to 0} (A^T A + \alpha I)^{-1} A^T \tag{2.46} \]
+
+\[ A^+ = V D^+ U^+ \tag{2.47} \]
+
 
 
 ## 02.10. The Trace Operator
