@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:20:7
-Modified: 	2019-06-03 13:29:46
+Modified: 	2019-06-03 13:36:48
 -----
 Copyright (c) 2019 shumez
 -->
@@ -262,8 +262,8 @@ AT_A = np.matmul(A, A.T)
 
 **eigendecomposition**: into set of eigenvectors & eigenvalues
 
-**eigenvector** of square mat \(\mathbf{A}\) is non-zero vec \(\mathbf{v}\)
-\[ \mathbf{A}\mathbf{v} = \lambda \mathbf{v} \tag{2.39} \]
+**eigenvector** of square mat \(A\) is non-zero vec \(v\)
+\[ Av = \lambda v \tag{2.39} \]
 
 **eigenvalue** \(\lambda\) 
 
@@ -273,15 +273,15 @@ l, V = np.linalg.eig(A)
 
 [![Fig.2.3][fig0203]][fig0203]
 
-mat \(\mathbf{A}\) has \(n\) linearly independent eigenvec \(\{ \mathbf{v}^{(1)}, \cdots, \mathbf{v}^{(n)} \}\),
+mat \(A\) has \(n\) linearly independent eigenvec \(\{ v^{(1)}, \cdots, v^{(n)} \}\),
 w/ corresponding eigenval \(\{ \lambda_1, \cdots, \lambda_n \}\)
 
-mat \(\mathbf{V}\): \(\mathbf{V} = [ \mathbf{v}^{(1)}, \cdots, \mathbf{v}^{(b)} ] \),  
+mat \(V\): \(V = [ v^{(1)}, \cdots, v^{(b)} ] \),  
 vec \(\lambda\): \([\lambda_1, \cdots, \lambda_n]^T\)
 
 **eigendecomposition**
 
-\[ \mathbf{A} = \mathbf{V} \text{diag}(\lambda) \mathbf{V}^{-1} \tag{2.40} \]
+\[ A = V\text{diag}(\lambda) V^{-1} \tag{2.40} \]
 
 ```py
 np.linalg.multi_dot([V, np.diag(l), np.linalg.inv(V)])
@@ -289,11 +289,10 @@ np.linalg.multi_dot([V, np.diag(l), np.linalg.inv(V)])
 
 \[
 	\begin{align*}
-		\mathbf{A} 
-		&= \mathbf{Q \Lambda Q}^T \\
+		A &= Q \Lambda Q^T \\
 		&= 
 		\begin{bmatrix}
-			\mathbf{v}_1 & \mathbf{v}_2 & \cdots & \mathbf{v}_n
+			v_1 & v_2 & \cdots & v_n
 		\end{bmatrix}
 		\begin{bmatrix}
 			\lambda_1 & 0 & \cdots & 0 \\
@@ -302,18 +301,19 @@ np.linalg.multi_dot([V, np.diag(l), np.linalg.inv(V)])
 			0 & 0 & \cdots & \lambda_n 
 		\end{bmatrix}
 		\begin{bmatrix}
-			\mathbf{v}_1 \\ \mathbf{v}_2 \\ \vdots \\ \mathbf{v}_n
+			v_1 \\ v_2 \\ \vdots \\ v_n
 		\end{bmatrix}
 	\end{align*}
 	\tag{2.41} 
 \]
   
-eigenvectors, orthogonal mat \(\mathbf{Q}\) of \(\mathbf{A}\),  
-eigenvalues, diagonal mat \(\mathbf{\Lambda}\) of \(\mathbf{A}\)
+eigenvectors, orthogonal mat \(Q\) of \(A\),  
+eigenvalues, diagonal mat \(\Lambda\) of \(A\)
 
-eigenvalue \(\mathbf{\Lambda}_{i,i}\) is associated w eigenvector \(\mathbf{Q}_{:,i}\)
+eigenvalue \(\Lambda_{i,i}\) is associated w eigenvector \(Q_{:,i}\)
 
-\(f(\mathbf{x}) = \mathbf{x}^T \mathbf{A x}\) (\(||\mathbf{x}|| = 1\))
+\(f(x) = x^T Ax\)  
+(\(||x|| = 1\))
 
 
 * **positive definite**: mat whose eigenval are all positive
@@ -323,10 +323,10 @@ eigenvalue \(\mathbf{\Lambda}_{i,i}\) is associated w eigenvector \(\mathbf{Q}_{
 
 
 positive semideginite mat   
-\(\forall\mathbf{x}, \mathbf{x}^T \mathbf{Ax} \ge 0\)
+\(\forall x, x^T Ax \ge 0\)
 
 positive definite mat  
-\(\mathbf{x}^T \mathbf{Ax} = 0 \Rightarrow \mathbf{x} = 0\)
+\(x^T Ax = 0 \Rightarrow x = 0\)
 
 
 ## 02.08. Singular Value Decomposition
