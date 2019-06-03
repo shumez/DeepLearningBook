@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:20:7
-Modified: 	2019-06-03 13:28:0
+Modified: 	2019-06-03 13:29:46
 -----
 Copyright (c) 2019 shumez
 -->
@@ -339,15 +339,15 @@ u, s, vh = np.linalg.svd(A, full_matrices=False)
 ```
 
 eigendecomposition
-\[ \mathbf{A} = \mathbf{V} \text{diag}(\mathbf{\lambda}) \mathbf{V}^{-1} \tag{2.42} \]
+\[ A = V \text{diag}(\lambda) V^{-1} \tag{2.42} \]
 
 singular value decomposition
-\[ \mathbf{A} = \mathbf{U D V}^T \tag{2.43} \]
+\[ A = UDV^T \tag{2.43} \]
 
-\(\mathbf{A}\) \(m \times n\) mat  
-**left-singular vec** \(\mathbf{U}\) \(m \times m\) orthogonal mat  
-**singular values** \(\mathbf{D}\) \(m \times n\) diagonal mat  
-**right-singular vec** \(\mathbf{V}\) \(n \times n\) orthogonal mat
+\(A\) \(m \times n\) mat  
+**left-singular vec** \(U\) \(m \times m\) orthogonal mat  
+**singular values** \(D\) \(m \times n\) diagonal mat  
+**right-singular vec** \(V\) \(n \times n\) orthogonal mat
 
 
 ## 02.09. The Moore-Penrose Pseudoinverse
