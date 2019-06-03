@@ -145,7 +145,7 @@ Filename:   note.md
 Project:    /Users/shume/Developer/DeepLearningBook/02
 Author:     shumez <https://github.com/shumez>
 Created:    2019-05-30 18:20:7
-Modified:   2019-06-03 14:08:33
+Modified:   2019-06-03 14:44:43
 -----
 Copyright (c) 2019 shumez
 -->
@@ -502,9 +502,15 @@ eigenvalues, diagonal mat <script type="math/tex">\Lambda</script> of <script ty
     \end{align*}
 </script>
 </p>
-<p><strong>Moore-Penrose pseudoinverse</strong>
-<script type="math/tex; mode=display">  </script>
+<p>left-inverse <script type="math/tex">B</script> of mat <script type="math/tex">A</script>
+</p>
+<p><strong>Moore-Penrose pseudoinverse</strong></p>
+<p>pseudoinverse of <script type="math/tex">A</script> is defined as </p>
+<p>
 <script type="math/tex; mode=display">  A^+ = \lim\limits_{\alpha \to 0} (A^T A + \alpha I)^{-1} A^T \tag{2.46} </script>
+</p>
+<p>
+<script type="math/tex; mode=display"> A^+ = V D^+ U^+ \tag{2.47} </script>
 </p>
 <h2 id="0210_the_trace_operator">02.10. The Trace Operator<a class="headerlink" href="#0210_the_trace_operator" title="Permanent link">&para;</a></h2>
 <h2 id="0211_the_determinant">02.11. The Determinant<a class="headerlink" href="#0211_the_determinant" title="Permanent link">&para;</a></h2>
@@ -574,5 +580,5 @@ eigenvalues, diagonal mat <script type="math/tex">\Lambda</script> of <script ty
 
 <!--
 MkDocs version : 1.0.2
-Build Date UTC : 2019-06-03 05:10:43
+Build Date UTC : 2019-06-03 05:45:41
 -->
