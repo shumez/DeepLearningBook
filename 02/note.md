@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:20:7
-Modified: 	2019-06-03 13:36:48
+Modified: 	2019-06-03 13:38:28
 -----
 Copyright (c) 2019 shumez
 -->
@@ -197,7 +197,7 @@ where \(\theta\) is angle between \(\mathbf{x}\), \(\mathbf{y}\)
 
 ## 02.06. Special Kinds of Matricesand Vectors
 
-**diagonal** \(\mathbf{D}\)  
+**diagonal** \(D\)  
 if and only if \(D_{i,j}=0\) for all \(i \ne j\)
 
 ```py
@@ -213,7 +213,7 @@ array([[2, 0, 0, 0, 0],
        [0, 0, 0, 0, 3]])
 ```
 
-\[ \text{diag}(\mathbf{v}) \mathbf{x} = \mathbf{v} \odot \mathbf{x} \]
+\[ \text{diag}(v) x = v \odot x \]
 
 ```py
 np.matmul(np.diag(v), x)
@@ -221,7 +221,7 @@ np.matmul(np.diag(v), x)
 np.multiply(v, x)
 ```
 
-\[ \text{diag}(\mathbf{v})^{-1} = \text{diag}\Bigg( \bigg[\frac{1}{v_1}, \cdots \frac{1}{v_n} \bigg]^T \Bigg) \]
+\[ \text{diag}(v)^{-1} = \text{diag}\Bigg( \bigg[\frac{1}{v_1}, \cdots \frac{1}{v_n} \bigg]^T \Bigg) \]
 
 ```py
 np.linalg.inv(diag_v)
