@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-05-30 18:20:7
-Modified: 	2019-06-03 11:17:38
+Modified: 	2019-06-03 11:43:41
 -----
 Copyright (c) 2019 shumez
 -->
@@ -349,7 +349,20 @@ singular value decomposition
 **singular values** \(\mathbf{D}\) \(m \times n\) diagonal mat  
 **right-singular vec** \(\mathbf{V}\) \(n \times n\) orthogonal mat
 
+
 ## 02.09. The Moore-Penrose Pseudoinverse
+
+
+\[
+	\begin{align*}
+		\mathbf{A x} &= \mathbf{y} \tag{2.44} \\
+		\mathbf{x} &= \mathbf{B y} \tag{2.45}
+	\end{align*}
+\]
+
+**Moore-Penrose pseudoinverse**
+
+\[ \mathbf{A}^+ = \lim_{\alpha \rightarrow 0}{(\mathbf{A}^T \mathbf{A} + \alpha \mathbf{I})^{-1} \mathbf{A}^T} \tag{2.46} \]
 
 
 ## 02.10. The Trace Operator
