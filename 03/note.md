@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-06-03 19:38:5
-Modified: 	2019-06-06 17:07:25
+Modified: 	2019-06-06 17:14:33
 -----
 Copyright (c) 2019 shumez
 -->
@@ -44,6 +44,8 @@ Copyright (c) 2019 shumez
 
 
 ## 03.02. Random Variables
+
+**random var**
 
 
 ## 03.03. Probability Distributions
