@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-06-03 19:38:5
-Modified: 	2019-06-06 17:05:46
+Modified: 	2019-06-06 17:06:4
 -----
 Copyright (c) 2019 shumez
 -->
@@ -36,6 +36,7 @@ Copyright (c) 2019 shumez
 
 ## 03.01. Why Probability?
 
+[Ramsey (1926)][1926_Ramsey]
 
 
 ## 03.02. Random Variables
