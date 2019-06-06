@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-06-03 19:38:5
-Modified: 	2019-06-06 17:51:27
+Modified: 	2019-06-06 17:52:24
 -----
 Copyright (c) 2019 shumez
 -->
@@ -79,7 +79,7 @@ define var, specify which dist it follows
 
 **probability density fn** (PDF) \(p\)
 
-* \(\forall x \in \mathrm{x}, p(x) \ge 0\)
+* \(\forall x \in \mathrm{x}, p(x) \ge 0\)  
 	NOT require \(p(x) \le 1\)
 * \(\int{p(x) dx} = 1\)
 
