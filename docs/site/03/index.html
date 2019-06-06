@@ -71,6 +71,51 @@
     <li class="toctree-l2"><a href="#contents">Contents</a></li>
     
 
+    <li class="toctree-l2"><a href="#0300">03.00.</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0301_why_probability">03.01. Why Probability?</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0302_random_variables">03.02. Random Variables</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0303_probability_distributions">03.03. Probability Distributions</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0304_marginal_probability">03.04. Marginal Probability</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0305_conditional_probability">03.05. Conditional Probability</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0306_thechainruleofconditionalprobabilities">03.06. TheChainRuleofConditionalProbabilities</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0307_independence_and_conditional_independence">03.07. Independence and Conditional Independence</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0308_expectationvarianceandcovariance">03.08. Expectation,VarianceandCovariance</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0309_common_probability_distributions">03.09. Common Probability Distributions</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0310_usefulpropertiesofcommonfunctions">03.10. UsefulPropertiesofCommonFunctions</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0311_bayes_rule">03.11. Bayes’ Rule</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0312_technical_details_of_continuous_variables">03.12. Technical Details of Continuous Variables</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0313_information_theory">03.13. Information Theory</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0314_structured_probabilistic_models">03.14. Structured Probabilistic Models</a></li>
+    
+
     </ul>
 	    </li>
           
@@ -111,7 +156,7 @@ Filename:   note.md
 Project:    /Users/shume/Developer/DeepLearningBook/03
 Author:     shumez <https://github.com/shumez>
 Created:    2019-06-03 19:38:5
-Modified:   2019-06-03 19:48:23
+Modified:   2019-06-06 17:14:33
 -----
 Copyright (c) 2019 shumez
 -->
@@ -119,27 +164,50 @@ Copyright (c) 2019 shumez
 <h1 id="03_probability_and_information_theory"><a href="https://www.deeplearningbook.org/contents/prob.html">03. Probability and Information Theory</a><a class="headerlink" href="#03_probability_and_information_theory" title="Permanent link">&para;</a></h1>
 <h2 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="#">03.00.</a></li>
-<li><a href="#">03.01. Why Probability?</a></li>
-<li>[03.02. Random Variables][0302]</li>
-<li>[03.03. Probability Distributions][0303]</li>
-<li>[03.04. Marginal Probability][0304]</li>
-<li>[03.05. Conditional Probability][0305]</li>
-<li>[03.06. TheChainRuleofConditionalProbabilities][0306]</li>
-<li>[03.07. Independence and Conditional Independence][0307]</li>
-<li>[03.08. Expectation,VarianceandCovariance][0308]</li>
-<li>[03.09. Common Probability Distributions][0309]</li>
-<li>[03.10. UsefulPropertiesofCommonFunctions][0310]</li>
-<li>[03.11. Bayes’ Rule][0311]</li>
-<li>[03.12. Technical Details of Continuous Variables][0312]</li>
-<li>[03.13. Information Theory][0313]</li>
-<li>[03.14. Structured Probabilistic Models][0314]</li>
+<li><a href="#0300">03.00.</a></li>
+<li><a href="#0301_why_probability">03.01. Why Probability?</a></li>
+<li><a href="#0302_random_variables">03.02. Random Variables</a></li>
+<li><a href="#0303_probability_distributions">03.03. Probability Distributions</a></li>
+<li><a href="#0304_marginal_probability">03.04. Marginal Probability</a></li>
+<li><a href="#0305_conditional_probability">03.05. Conditional Probability</a></li>
+<li><a href="#0306_thechainruleofconditionalprobabilities">03.06. TheChainRuleofConditionalProbabilities</a></li>
+<li><a href="#0307_independence_and_conditional_independence">03.07. Independence and Conditional Independence</a></li>
+<li><a href="#0308_expectationvarianceandcovariance">03.08. Expectation,VarianceandCovariance</a></li>
+<li><a href="#0309_common_probability_distributions">03.09. Common Probability Distributions</a></li>
+<li><a href="#0310_usefulpropertiesofcommonfunctions">03.10. UsefulPropertiesofCommonFunctions</a></li>
+<li><a href="#0311_bayes_rule">03.11. Bayes’ Rule</a></li>
+<li><a href="#0312_technical_details_of_continuous_variables">03.12. Technical Details of Continuous Variables</a></li>
+<li><a href="#0313_information_theory">03.13. Information Theory</a></li>
+<li><a href="#0314_structured_probabilistic_models">03.14. Structured Probabilistic Models</a></li>
 </ul>
+<h2 id="0300">03.00.<a class="headerlink" href="#0300" title="Permanent link">&para;</a></h2>
+<p><a href="#0300">Jaynes (2003)</a></p>
+<h2 id="0301_why_probability">03.01. Why Probability?<a class="headerlink" href="#0301_why_probability" title="Permanent link">&para;</a></h2>
+<p><strong>frequent prob</strong></p>
+<p><strong>Bayesian prob</strong></p>
+<p><a href="#0301">Ramsey (1926)</a></p>
+<h2 id="0302_random_variables">03.02. Random Variables<a class="headerlink" href="#0302_random_variables" title="Permanent link">&para;</a></h2>
+<p><strong>random var</strong></p>
+<h2 id="0303_probability_distributions">03.03. Probability Distributions<a class="headerlink" href="#0303_probability_distributions" title="Permanent link">&para;</a></h2>
+<h2 id="0304_marginal_probability">03.04. Marginal Probability<a class="headerlink" href="#0304_marginal_probability" title="Permanent link">&para;</a></h2>
+<h2 id="0305_conditional_probability">03.05. Conditional Probability<a class="headerlink" href="#0305_conditional_probability" title="Permanent link">&para;</a></h2>
+<h2 id="0306_thechainruleofconditionalprobabilities">03.06. TheChainRuleofConditionalProbabilities<a class="headerlink" href="#0306_thechainruleofconditionalprobabilities" title="Permanent link">&para;</a></h2>
+<h2 id="0307_independence_and_conditional_independence">03.07. Independence and Conditional Independence<a class="headerlink" href="#0307_independence_and_conditional_independence" title="Permanent link">&para;</a></h2>
+<h2 id="0308_expectationvarianceandcovariance">03.08. Expectation,VarianceandCovariance<a class="headerlink" href="#0308_expectationvarianceandcovariance" title="Permanent link">&para;</a></h2>
+<h2 id="0309_common_probability_distributions">03.09. Common Probability Distributions<a class="headerlink" href="#0309_common_probability_distributions" title="Permanent link">&para;</a></h2>
+<h2 id="0310_usefulpropertiesofcommonfunctions">03.10. UsefulPropertiesofCommonFunctions<a class="headerlink" href="#0310_usefulpropertiesofcommonfunctions" title="Permanent link">&para;</a></h2>
+<h2 id="0311_bayes_rule">03.11. Bayes’ Rule<a class="headerlink" href="#0311_bayes_rule" title="Permanent link">&para;</a></h2>
+<h2 id="0312_technical_details_of_continuous_variables">03.12. Technical Details of Continuous Variables<a class="headerlink" href="#0312_technical_details_of_continuous_variables" title="Permanent link">&para;</a></h2>
+<h2 id="0313_information_theory">03.13. Information Theory<a class="headerlink" href="#0313_information_theory" title="Permanent link">&para;</a></h2>
+<h2 id="0314_structured_probabilistic_models">03.14. Structured Probabilistic Models<a class="headerlink" href="#0314_structured_probabilistic_models" title="Permanent link">&para;</a></h2>
 <h2 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<h2 id="_2"><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <!-- toc -->
 
 <!-- ref -->
+
+<!-- 0300 -->
+
+<!-- 0301 -->
 
 <!-- fig -->
 
@@ -201,5 +269,5 @@ Copyright (c) 2019 shumez
 
 <!--
 MkDocs version : 1.0.2
-Build Date UTC : 2019-06-03 11:57:04
+Build Date UTC : 2019-06-06 08:14:52
 -->
