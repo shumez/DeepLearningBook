@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-06-03 19:38:5
-Modified: 	2019-06-06 17:04:32
+Modified: 	2019-06-06 17:05:46
 -----
 Copyright (c) 2019 shumez
 -->
@@ -31,6 +31,7 @@ Copyright (c) 2019 shumez
 
 ## 03.00.
 
+[Jaynes (2003)][2003_Jaynes]
 
 
 ## 03.01. Why Probability?
