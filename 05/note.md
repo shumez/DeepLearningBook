@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/05
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-06-06 18:02:1
-Modified: 	2019-06-08 12:56:38
+Modified: 	2019-06-08 13:33:25
 -----
 Copyright (c) 2019 shumez
 -->
@@ -53,10 +53,57 @@ Copyright (c) 2019 shumez
 [Murphy (2012)][2012_Murphy], [Bishop (2006)][2006_Bishop]
 
 ## 05.01. Learning Algorithms
+
+learn from experience \(E\) w respect to tasks \(T\) & performance measure \(P\)
+
 ### 05.01.01. The Task, \(T\)
+
+**classification**
+
+**classification w missing inputs**
+
+**regression**
+
+**transcription**
+
+**machine translation**
+
+**structured output**
+
+**anomaly detection**
+
+**synthesis and samplint**
+
+**mputation of missing values**
+
+**denoising**
+
+**density estimation** / **probability mass function estimation**
+
 ### 05.01.02. The Performance Measure, \(P\)
+
+* accuracy
+* error rate
+
 ### 05.01.03. The Experience, \(E\)
+
+* unsuprevised
+* supervised
+
+\[ p(\mathrm{x}) = \prod_{i=1}^n{p(\mathrm{x}_i | \mathrm{x}_1, \cdots, \mathrm{x}_{i-1})} \tag{5.1} \]
+
+\[ p(y | \mathrm{x}) = \frac{p(\mathrm{x}, y)}{\sum_{y'}{p(\mathrm{x}, y')}} \tag{5.2} \]
+
+* reinforcement learning
+
+
 ### 05.01.04. Example: Linear Regression
+
+\[ \hat{y} = w^T x \tag{5.3} \]
+\(w \in \mathbb{R}^n \)
+
+\[ \text{MSE}_{\text{text}} = \frac{1}{m} \sum_i{( \hat{y}^{\text{(test)}} - y^{(\text{test})} )_i^2} \tag{5.4} \]
+
 ## 05.02. Capacity, Overfitting and Underfitting
 ### 05.02.01. The No Free Lunch Theorem
 ### 05.02.02. Regularization
