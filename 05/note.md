@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/05
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-06-06 18:02:1
-Modified: 	2019-06-08 15:38:3
+Modified: 	2019-06-08 16:23:33
 -----
 Copyright (c) 2019 shumez
 -->
@@ -131,6 +131,7 @@ eq.5.12 **normal eq**
 
 \[ \hat{y} = w^T x + b \tag{5.13} \]
 
+bias \(b\)
 
 
 ## 05.02. Capacity, Overfitting and Underfitting
