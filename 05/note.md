@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/05
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-06-06 18:02:1
-Modified: 	2019-06-06 22:29:8
+Modified: 	2019-06-08 12:56:38
 -----
 Copyright (c) 2019 shumez
 -->
@@ -49,6 +49,9 @@ Copyright (c) 2019 shumez
     * [05.11.03. Monifold Learning][051103]
 
 ## 05.00.
+
+[Murphy (2012)][2012_Murphy], [Bishop (2006)][2006_Bishop]
+
 ## 05.01. Learning Algorithms
 ### 05.01.01. The Task, \(T\)
 ### 05.01.02. The Performance Measure, \(P\)
@@ -106,6 +109,8 @@ Copyright (c) 2019 shumez
 [050404]: #050404_trading_off_bias_and_variance_to_minimize_mean_squared_error
 
 <!-- ref -->
+[2012_Murphy]: #
+[2006_Bishop]: #
 
 <!-- fig -->
 
