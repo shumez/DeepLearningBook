@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/05
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-06-06 18:02:1
-Modified: 	2019-06-08 13:33:25
+Modified: 	2019-06-08 15:38:3
 -----
 Copyright (c) 2019 shumez
 -->
@@ -102,7 +102,36 @@ learn from experience \(E\) w respect to tasks \(T\) & performance measure \(P\)
 \[ \hat{y} = w^T x \tag{5.3} \]
 \(w \in \mathbb{R}^n \)
 
+**mean squared error**
+
 \[ \text{MSE}_{\text{text}} = \frac{1}{m} \sum_i{( \hat{y}^{\text{(test)}} - y^{(\text{test})} )_i^2} \tag{5.4} \]
+
+\[ \text{MSE}_{\text{text}} = \frac{1}{m} \Big\| \hat{y}^{\text{(test)}} - y^{(\text{test})} \Big\|_2^2 \tag{5.4} \]
+
+to minimize \(\text{MSE}_{\text{train}}\), gradient 
+
+\[ 
+    \begin{align*}
+        \nabla_w \text{MSE}_{\text{train}} &= 0 \tag{5.6} \\
+        \nabla_w \frac{1}{m} \Big\| \hat{y}^{\text{train}} - y^{\text{(train)}} \Big|_2^2 &= 0 \tag{5.7} \\
+        \frac{1}{m} \nabla_w \Big\| X^{(\text{train})} w - y^{\text{(train)}} \Big\|_2^2 &= 0 \tag{5.8}
+    \end{align*}
+\]
+
+\[
+    \begin{align*}
+        \nabla_w \Big( X^{\text{train}} w - y^{\text{train}} \Big)^T \Big( X^{\text{train}} w - y^{\text{train}} \Big) &= 0 \tag{5.9} \\
+        w X^{\text{(train)} T} X^{\text{(train)}} w - 2X^{\text{(train)} T} y^{\text{(train)}} &= 0 \tag{5.11} \\
+        w = \Big( X^{\text{(train)} T} X^{\text{(train)}} \Big)^{-1} X^{\text{(train)} T} y^{\text{(train)}} \tag{5.12}
+    \end{align*}
+\]
+
+eq.5.12 **normal eq**
+
+
+\[ \hat{y} = w^T x + b \tag{5.13} \]
+
+
 
 ## 05.02. Capacity, Overfitting and Underfitting
 ### 05.02.01. The No Free Lunch Theorem
