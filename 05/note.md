@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/05
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-06-06 18:02:1
-Modified: 	2019-06-08 17:08:14
+Modified: 	2019-06-08 17:27:41
 -----
 Copyright (c) 2019 shumez
 -->
@@ -229,6 +229,25 @@ degree 9
 [050402]: #050402_bias
 [050403]: #050403_variance_and_standard_error
 [050404]: #050404_trading_off_bias_and_variance_to_minimize_mean_squared_error
+[050405]: #050405_consistency
+[0505]: #0505_maximum_likelihood_estimation
+[050501]: #050501_conditional_log-likelihood_and_mean_squared_error
+[050502]: #050502_properties_of_maximum_likelihood
+[0506]: #0506_bayesian_statistics
+[050601]: #050601_maximum_a_posteori_map_estimation
+[0507]: #0507_supervised_learning_algorithm
+[050701]: #050701_probabilistic_supervised_learning
+[050702]: #050702_support_vector_machines
+[050703]: #050703_other_simple_supervised_learning_algorithms
+[0508]: #0508_unsupervised_learning_algorithms
+[050801]: #050801_principal_components_analysis
+[050802]: #050802_k-means_clustering
+[0509]: #0509_stochastic_gradient_descent
+[0510]: #0510_building_a_mchine_learning_algorithm
+[0511]: #0511_challenges_motivating_deep_learning
+[051101]: #051101_the_curse_of_dimensionality
+[051102]: #051102_local_constancy_and_smoothness_regularization
+[051103]: #051103_monifold_learning
 
 <!-- ref -->
 [2012_Murphy]: #
