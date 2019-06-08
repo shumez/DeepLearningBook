@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/05
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-06-06 18:02:1
-Modified: 	2019-06-08 16:23:33
+Modified: 	2019-06-08 17:08:14
 -----
 Copyright (c) 2019 shumez
 -->
@@ -135,6 +135,51 @@ bias \(b\)
 
 
 ## 05.02. Capacity, Overfitting and Underfitting
+
+**generalization**
+
+**training error**, **generalization error** (**test error**)
+
+\[ \frac{1}{m^{\text{(train)}}} \Big\| X^{\text{(train)}} w - y^{\text{(train)}} \Big\|_2^2 \tag{5.14} \]
+
+**statistical learning theory**
+
+**data generating process**  
+**i.i.d. assumptions**  
+**identically distributed**  
+**data generating distribution**
+
+1. make training error small
+2. make gap between training & test error small
+
+**underfitting**  
+**overfitting**
+
+**hypothesis space**
+
+\[ \hat{y} = b + wx \tag{5.15} \]
+
+\[ \hat{y} = b + w_1 x + w_2 x^2 \tag{5.16} \]
+
+degree 9
+\[ \hat{y} = b + \sum_{i=1}^9{w_i x^i} \tag{5.17} \]
+
+**representational capacity**  
+**effective capacity**
+
+**Occam's razor**
+
+**Vapnik-Chervonenkis demension**  
+**non-parametric** models
+
+**nearest neighbor regression**
+
+**Bayes error**
+
+
+
+
+
 ### 05.02.01. The No Free Lunch Theorem
 ### 05.02.02. Regularization
 ## 05.03. Hyperparameters and Validation Sets
