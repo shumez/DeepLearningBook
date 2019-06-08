@@ -274,7 +274,7 @@ Filename:   note.md
 Project:    /Users/shume/Developer/DeepLearningBook/05
 Author:     shumez <https://github.com/shumez>
 Created:    2019-06-06 18:02:1
-Modified:   2019-06-08 15:38:3
+Modified:   2019-06-08 17:08:14
 -----
 Copyright (c) 2019 shumez
 -->
@@ -410,7 +410,42 @@ Copyright (c) 2019 shumez
 <p>
 <script type="math/tex; mode=display"> \hat{y} = w^T x + b \tag{5.13} </script>
 </p>
+<p>bias <script type="math/tex">b</script>
+</p>
 <h2 id="0502_capacity_overfitting_and_underfitting">05.02. Capacity, Overfitting and Underfitting<a class="headerlink" href="#0502_capacity_overfitting_and_underfitting" title="Permanent link">&para;</a></h2>
+<p><strong>generalization</strong></p>
+<p><strong>training error</strong>, <strong>generalization error</strong> (<strong>test error</strong>)</p>
+<p>
+<script type="math/tex; mode=display"> \frac{1}{m^{\text{(train)}}} \Big\| X^{\text{(train)}} w - y^{\text{(train)}} \Big\|_2^2 \tag{5.14} </script>
+</p>
+<p><strong>statistical learning theory</strong></p>
+<p><strong>data generating process</strong><br />
+<strong>i.i.d. assumptions</strong><br />
+<strong>identically distributed</strong><br />
+<strong>data generating distribution</strong></p>
+<ol>
+<li>make training error small</li>
+<li>make gap between training &amp; test error small</li>
+</ol>
+<p><strong>underfitting</strong><br />
+<strong>overfitting</strong></p>
+<p><strong>hypothesis space</strong></p>
+<p>
+<script type="math/tex; mode=display"> \hat{y} = b + wx \tag{5.15} </script>
+</p>
+<p>
+<script type="math/tex; mode=display"> \hat{y} = b + w_1 x + w_2 x^2 \tag{5.16} </script>
+</p>
+<p>degree 9
+<script type="math/tex; mode=display"> \hat{y} = b + \sum_{i=1}^9{w_i x^i} \tag{5.17} </script>
+</p>
+<p><strong>representational capacity</strong><br />
+<strong>effective capacity</strong></p>
+<p><strong>Occam's razor</strong></p>
+<p><strong>Vapnik-Chervonenkis demension</strong><br />
+<strong>non-parametric</strong> models</p>
+<p><strong>nearest neighbor regression</strong></p>
+<p><strong>Bayes error</strong></p>
 <h3 id="050201_the_no_free_lunch_theorem">05.02.01. The No Free Lunch Theorem<a class="headerlink" href="#050201_the_no_free_lunch_theorem" title="Permanent link">&para;</a></h3>
 <h3 id="050202_regularization">05.02.02. Regularization<a class="headerlink" href="#050202_regularization" title="Permanent link">&para;</a></h3>
 <h2 id="0503_hyperparameters_and_validation_sets">05.03. Hyperparameters and Validation Sets<a class="headerlink" href="#0503_hyperparameters_and_validation_sets" title="Permanent link">&para;</a></h2>
