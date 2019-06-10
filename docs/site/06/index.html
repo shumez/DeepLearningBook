@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>06. Deep Feedforward Networks - Deep Learning Book</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "06. Deep Feedforward Networks";
+    var mkdocs_page_input_path = "06/index.md";
+    var mkdocs_page_url = "/06/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Deep Learning Book</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Part 0.</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../01/">01. Introduction</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Part I. Applied Math and Machine Learning Basics</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../02/">02. Linear Algebra</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../03/">03. Probability and Information Theory</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../04/">04. Numerical Computation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../05/">05. Machine Learning Basics</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Part II. Deep Networks: Modern Practices</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">06. Deep Feedforward Networks</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#contents">Contents</a></li>
+    
+
+    <li class="toctree-l3"><a href="#0600">06.00.</a></li>
+    
+
+    <li class="toctree-l3"><a href="#0601_example_learning_xor">06.01. Example: Learning XOR</a></li>
+    
+
+    <li class="toctree-l3"><a href="#0602_gradient-based_learning">06.02. Gradient-Based Learning</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#060201_cost_functions">06.02.01. Cost Functions</a></li>
+        
+            <li><a class="toctree-l4" href="#060202_output_units">06.02.02. Output Units</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l3"><a href="#0603_hidden_units">06.03. Hidden Units</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#060301_rectified_linear_units_and_their_generalizations">06.03.01. Rectiﬁed Linear Units and Their Generalizations</a></li>
+        
+            <li><a class="toctree-l4" href="#060302_logistic_sigmoid_and_hyperbolic_tangent">06.03.02. Logistic Sigmoid and Hyperbolic Tangent</a></li>
+        
+            <li><a class="toctree-l4" href="#060303_other_hidden_units">06.03.03. Other Hidden Units</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l3"><a href="#0604_architecture_design">06.04. Architecture Design</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#060401_universal_approximation_properties_and_depth">06.04.01. Universal Approximation Properties and Depth</a></li>
+        
+            <li><a class="toctree-l4" href="#060402_other_architectural_considerations">06.04.02. Other Architectural Considerations</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l3"><a href="#0605_back-propagation_and_other_differentiation_algorithms">06.05. Back-Propagation and Other Differentiation Algorithms</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#060501_computational_graphs">06.05.01. Computational Graphs</a></li>
+        
+            <li><a class="toctree-l4" href="#060502_chain_rule_of_calculus">06.05.02. Chain Rule of Calculus</a></li>
+        
+            <li><a class="toctree-l4" href="#060503_recursively_applying_the_chain_rule_to_obtain_backprop">06.05.03. Recursively Applying the Chain Rule to Obtain Backprop</a></li>
+        
+            <li><a class="toctree-l4" href="#060504_back-propagation_computation_in_fully_connected_mlp">06.05.04. Back-Propagation Computation in Fully Connected MLP</a></li>
+        
+            <li><a class="toctree-l4" href="#060505_symbol-to-symbol_derivatives">06.05.05. Symbol-to-Symbol Derivatives</a></li>
+        
+            <li><a class="toctree-l4" href="#060506_general_back-propagation">06.05.06. General Back-Propagation</a></li>
+        
+            <li><a class="toctree-l4" href="#060507_example_back-propagation_for_mlp_training">06.05.07. Example: Back-Propagation for MLP Training</a></li>
+        
+            <li><a class="toctree-l4" href="#060508_complications">06.05.08. Complications</a></li>
+        
+            <li><a class="toctree-l4" href="#060509_differentiation_outside_the_deep_learning_community">06.05.09. Diﬀerentiation outside the Deep Learning Community</a></li>
+        
+            <li><a class="toctree-l4" href="#060510_higher-order_derivatives">06.05.10. Higher-Order Derivatives</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l3"><a href="#0606_historical_notes">06.06. Historical Notes</a></li>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Part III. Deep Learning Research</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href=".."></a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Deep Learning Book</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Part II. Deep Networks: Modern Practices &raquo;</li>
+        
+      
+    
+    <li>06. Deep Feedforward Networks</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <!--
+Filename:   note.md
+Project:    /Users/shume/Developer/DeepLearningBook/06
+Author:     shumez <https://github.com/shumez>
+Created:    2019-06-10 09:01:2
+Modified:   2019-06-10 09:39:32
+-----
+Copyright (c) 2019 shumez
+-->
+
+<h1 id="06_deep_feedforward_networks"><a href="https://www.deeplearningbook.org/contents/mlp.html">06. Deep Feedforward Networks</a><a class="headerlink" href="#06_deep_feedforward_networks" title="Permanent link">&para;</a></h1>
+<h2 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#0600">06.00.</a></li>
+<li><a href="#0601_example_learning_xor">06.01. Example: Learning XOR</a></li>
+<li><a href="#0602_gradient-based_learning">06.02. Gradient-Based Learning</a><ul>
+<li><a href="#060201_cost_functions">06.02.01. Cost Functions</a><ul>
+<li><a href="#06020101_learning_conditional_distributions_with_maximum_likelihood">06.02.01.01. Learning Conditional Distributions with Maximum Likelihood</a></li>
+<li><a href="#06020102_learning_conditional_statistics">06.02.01.02. Learning Conditional Statistics</a></li>
+</ul>
+</li>
+<li><a href="#060202_output_units">06.02.02. Output Units</a><ul>
+<li><a href="#06020201_linear_units_for_gaussian_output_distributions">06.02.02.01. Linear Units for Gaussian Output Distributions</a></li>
+<li><a href="#">06.02.02.02. Sigmoid Units for Bernoulli Output Distributions</a></li>
+<li><a href="#">06.02.02.03. Softmax Units for Multinoulli Output Distributions</a></li>
+<li><a href="#">06.02.02.04. Other Output Types</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#0603_hidden_units">06.03. Hidden Units</a><ul>
+<li><a href="#">06.03.01. Rectiﬁed Linear Units and Their Generalizations</a></li>
+<li><a href="#">06.03.02. Logistic Sigmoid and Hyperbolic Tangent</a></li>
+<li><a href="#">06.03.03. Other Hidden Units</a></li>
+</ul>
+</li>
+<li><a href="#0604_architecture_design">06.04. Architecture Design</a><ul>
+<li><a href="#">06.04.01. Universal Approximation Properties and Depth</a></li>
+<li><a href="#">06.04.02. Other Architectural Considerations</a></li>
+</ul>
+</li>
+<li><a href="#0605_back-propagation_and_other_differentiation_algorithms">06.05. Back-Propagation and Other Differentiation Algorithms</a><ul>
+<li><a href="#">06.05.01. Computational Graphs</a></li>
+<li><a href="#">06.05.02. Chain Rule of Calculus</a></li>
+<li><a href="#">06.05.03. Recursively Applying the Chain Rule to Obtain Backprop</a></li>
+<li><a href="#">06.05.04. Back-Propagation Computation in Fully Connected MLP</a></li>
+<li><a href="#">06.05.05. Symbol-to-Symbol Derivatives</a></li>
+<li><a href="#">06.05.06. General Back-Propagation</a></li>
+<li><a href="#">06.05.07. Example: Back-Propagation for MLP Training</a></li>
+<li><a href="#">06.05.08. Complications</a></li>
+<li><a href="#">06.05.09. Diﬀerentiation outside the Deep Learning Community</a></li>
+<li><a href="#">06.05.10. Higher-Order Derivatives</a></li>
+</ul>
+</li>
+<li><a href="#0606_historical_notes">06.06. Historical Notes</a></li>
+</ul>
+<h2 id="0600">06.00.<a class="headerlink" href="#0600" title="Permanent link">&para;</a></h2>
+<h2 id="0601_example_learning_xor">06.01. Example: Learning XOR<a class="headerlink" href="#0601_example_learning_xor" title="Permanent link">&para;</a></h2>
+<h2 id="0602_gradient-based_learning">06.02. Gradient-Based Learning<a class="headerlink" href="#0602_gradient-based_learning" title="Permanent link">&para;</a></h2>
+<h3 id="060201_cost_functions">06.02.01. Cost Functions<a class="headerlink" href="#060201_cost_functions" title="Permanent link">&para;</a></h3>
+<h4 id="06020101_learning_conditional_distributions_with_maximum_likelihood">06.02.01.01. Learning Conditional Distributions with Maximum Likelihood<a class="headerlink" href="#06020101_learning_conditional_distributions_with_maximum_likelihood" title="Permanent link">&para;</a></h4>
+<h4 id="06020102_learning_conditional_statistics">06.02.01.02. Learning Conditional Statistics<a class="headerlink" href="#06020102_learning_conditional_statistics" title="Permanent link">&para;</a></h4>
+<h3 id="060202_output_units">06.02.02. Output Units<a class="headerlink" href="#060202_output_units" title="Permanent link">&para;</a></h3>
+<h4 id="06020201_linear_units_for_gaussian_output_distributions">06.02.02.01. Linear Units for Gaussian Output Distributions<a class="headerlink" href="#06020201_linear_units_for_gaussian_output_distributions" title="Permanent link">&para;</a></h4>
+<h4 id="06020202_sigmoid_units_for_bernoulli_output_distributions">06.02.02.02. Sigmoid Units for Bernoulli Output Distributions<a class="headerlink" href="#06020202_sigmoid_units_for_bernoulli_output_distributions" title="Permanent link">&para;</a></h4>
+<h4 id="06020203_softmax_units_for_multinoulli_output_distributions">06.02.02.03. Softmax Units for Multinoulli Output Distributions<a class="headerlink" href="#06020203_softmax_units_for_multinoulli_output_distributions" title="Permanent link">&para;</a></h4>
+<h4 id="06020204_other_output_types">06.02.02.04. Other Output Types<a class="headerlink" href="#06020204_other_output_types" title="Permanent link">&para;</a></h4>
+<h2 id="0603_hidden_units">06.03. Hidden Units<a class="headerlink" href="#0603_hidden_units" title="Permanent link">&para;</a></h2>
+<h3 id="060301_rectified_linear_units_and_their_generalizations">06.03.01. Rectiﬁed Linear Units and Their Generalizations<a class="headerlink" href="#060301_rectified_linear_units_and_their_generalizations" title="Permanent link">&para;</a></h3>
+<h3 id="060302_logistic_sigmoid_and_hyperbolic_tangent">06.03.02. Logistic Sigmoid and Hyperbolic Tangent<a class="headerlink" href="#060302_logistic_sigmoid_and_hyperbolic_tangent" title="Permanent link">&para;</a></h3>
+<h3 id="060303_other_hidden_units">06.03.03. Other Hidden Units<a class="headerlink" href="#060303_other_hidden_units" title="Permanent link">&para;</a></h3>
+<h2 id="0604_architecture_design">06.04. Architecture Design<a class="headerlink" href="#0604_architecture_design" title="Permanent link">&para;</a></h2>
+<h3 id="060401_universal_approximation_properties_and_depth">06.04.01. Universal Approximation Properties and Depth<a class="headerlink" href="#060401_universal_approximation_properties_and_depth" title="Permanent link">&para;</a></h3>
+<h3 id="060402_other_architectural_considerations">06.04.02. Other Architectural Considerations<a class="headerlink" href="#060402_other_architectural_considerations" title="Permanent link">&para;</a></h3>
+<h2 id="0605_back-propagation_and_other_differentiation_algorithms">06.05. Back-Propagation and Other Differentiation Algorithms<a class="headerlink" href="#0605_back-propagation_and_other_differentiation_algorithms" title="Permanent link">&para;</a></h2>
+<h3 id="060501_computational_graphs">06.05.01. Computational Graphs<a class="headerlink" href="#060501_computational_graphs" title="Permanent link">&para;</a></h3>
+<h3 id="060502_chain_rule_of_calculus">06.05.02. Chain Rule of Calculus<a class="headerlink" href="#060502_chain_rule_of_calculus" title="Permanent link">&para;</a></h3>
+<h3 id="060503_recursively_applying_the_chain_rule_to_obtain_backprop">06.05.03. Recursively Applying the Chain Rule to Obtain Backprop<a class="headerlink" href="#060503_recursively_applying_the_chain_rule_to_obtain_backprop" title="Permanent link">&para;</a></h3>
+<h3 id="060504_back-propagation_computation_in_fully_connected_mlp">06.05.04. Back-Propagation Computation in Fully Connected MLP<a class="headerlink" href="#060504_back-propagation_computation_in_fully_connected_mlp" title="Permanent link">&para;</a></h3>
+<h3 id="060505_symbol-to-symbol_derivatives">06.05.05. Symbol-to-Symbol Derivatives<a class="headerlink" href="#060505_symbol-to-symbol_derivatives" title="Permanent link">&para;</a></h3>
+<h3 id="060506_general_back-propagation">06.05.06. General Back-Propagation<a class="headerlink" href="#060506_general_back-propagation" title="Permanent link">&para;</a></h3>
+<h3 id="060507_example_back-propagation_for_mlp_training">06.05.07. Example: Back-Propagation for MLP Training<a class="headerlink" href="#060507_example_back-propagation_for_mlp_training" title="Permanent link">&para;</a></h3>
+<h3 id="060508_complications">06.05.08. Complications<a class="headerlink" href="#060508_complications" title="Permanent link">&para;</a></h3>
+<h3 id="060509_differentiation_outside_the_deep_learning_community">06.05.09. Diﬀerentiation outside the Deep Learning Community<a class="headerlink" href="#060509_differentiation_outside_the_deep_learning_community" title="Permanent link">&para;</a></h3>
+<h3 id="060510_higher-order_derivatives">06.05.10. Higher-Order Derivatives<a class="headerlink" href="#060510_higher-order_derivatives" title="Permanent link">&para;</a></h3>
+<h2 id="0606_historical_notes">06.06. Historical Notes<a class="headerlink" href="#0606_historical_notes" title="Permanent link">&para;</a></h2>
+<h2 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<!-- toc -->
+
+<!-- ref -->
+
+<!-- fig -->
+
+<!-- term -->
+
+<style type="text/css">
+    img{width: 51%; float: right;}
+</style>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../05/" class="btn btn-neutral" title="05. Machine Learning Basics"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2018 - 2019 <a href="https://github.com/shumez">shumez</a>
+</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../05/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
