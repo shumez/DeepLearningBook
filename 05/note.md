@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/05
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-06-06 18:02:1
-Modified: 	2019-06-08 17:27:41
+Modified: 	2019-06-10 10:37:22
 -----
 Copyright (c) 2019 shumez
 -->
@@ -142,12 +142,16 @@ bias \(b\)
 
 \[ \frac{1}{m^{\text{(train)}}} \Big\| X^{\text{(train)}} w - y^{\text{(train)}} \Big\|_2^2 \tag{5.14} \]
 
+test error \(\frac{1}{m^{\text{(test)}}} \Big\| X^{\text{(test)}} w - y^{\text{(test)}} \Big\|_2^2\)
+
 **statistical learning theory**
 
 **data generating process**  
 **i.i.d. assumptions**  
 **identically distributed**  
 **data generating distribution**
+
+
 
 1. make training error small
 2. make gap between training & test error small
