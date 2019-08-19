@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-06-03 19:38:5
-Modified: 	2019-08-19 17:35:5
+Modified: 	2019-08-19 17:39:21
 -----
 Copyright (c) 2019 shumez
 -->
@@ -98,8 +98,17 @@ for continulous var
 \[p(x) = \int{p(x,y)dy} \tag{3.4}\]
 
 
-
 ## 03.05. Conditional Probability
+
+**conditional probability**
+
+\[ P(\mathrm{y}=y | \mathrm{x}=x) = \frac{P(\mathrm{y}=y, \mathrm{x}=x)}{P(\mathrm{x}=x)} \tag{3.5} \]
+
+
+
+**intervention query**: domain of **causal modeling**
+
+
 ## 03.06. The Chain Rule of Conditional Probabilities
 ## 03.07. Independence and Conditional Independence
 ## 03.08. Expectation, Variance and Covariance
