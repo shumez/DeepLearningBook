@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-06-03 19:38:5
-Modified: 	2019-06-06 17:52:24
+Modified: 	2019-08-19 17:35:5
 -----
 Copyright (c) 2019 shumez
 -->
@@ -84,6 +84,21 @@ define var, specify which dist it follows
 * \(\int{p(x) dx} = 1\)
 
 ## 03.04. Marginal Probability
+
+**marginal probability** distribution
+
+**sum rule**
+
+for discrete rand var 
+
+\[ \forall x \in \mathrm{x}, P(\mathrm{x}=x) = \sum_y{P(\mathrm{x}=x, \mathrm{y}=y)} \tag{3.3} \]
+
+for continulous var
+
+\[p(x) = \int{p(x,y)dy} \tag{3.4}\]
+
+
+
 ## 03.05. Conditional Probability
 ## 03.06. The Chain Rule of Conditional Probabilities
 ## 03.07. Independence and Conditional Independence
