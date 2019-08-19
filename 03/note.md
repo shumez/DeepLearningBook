@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-06-03 19:38:5
-Modified: 	2019-08-19 18:04:59
+Modified: 	2019-08-19 19:53:52
 -----
 Copyright (c) 2019 shumez
 -->
@@ -144,6 +144,41 @@ e.g.,
 
 
 ## 03.08. Expectation, Variance and Covariance
+
+**expectation** (**expected value**) of some fn \(f(x)\) w respect to a prob dist \(P(x)\)
+
+for discrete var 
+
+\[ \mathbb{E}_{\mathrm{x} \sim P} [f(x)] = \sum_x{P(x) f(x)} \tag{3.9} \]
+
+for continuous vars
+
+\[ \mathbb{E}_{\mathrm{x} \sim p} [f(x)] = \int{p(x) f(x) dx} \tag{3.10} \]
+
+expectation are linear 
+
+\[ \mathbb{E}_{\mathrm{x}} [\alpha f(x) + \beta g(x)] = \alpha \mathbb{E}_{\mathrm{x}} [f(x)] + \beta \mathbb{E}_{\mathrm{x}} [g(x)] \tag{3.11} \]
+
+when \(\alpha\) and \(\beta\) NOT dependent on \(x\)
+
+**variance**
+
+\[ \text{Var} \big( f(x) \big) = \mathbb{E} \Bigg[ \bigg(f(x) - \mathbb{E} \Big[ f(x) \Big] \bigg)^2 \Bigg] \tag{3.12} \]
+
+**standard deviation**
+
+
+**covariance**
+
+\[ \text{Cov} \big( f(x), g(y) \big) = \mathbb{E} \Bigg[ \bigg( f(x) - \mathbb{E} \Big[ f(x) \Big] \bigg) \bigg( g(y) - \mathbb{E} \Big[ g(y) \Big] \bigg) \Bigg] \tag{3.13} \]
+
+**covariance matrix**
+
+\[ \text{Cov}(\mathrm{x}_{i,j}) = \text{Cov} (\mathrm{x}_i, \mathrm{x}_j) \tag{3.14} \]
+
+\[ \text{Cov} (\mathrm{x}_i, \mathrm{x}_i) = \text{Var}(\mathrm{x}_i) \tag{3.15} \]
+
+
 ## 03.09. Common Probability Distributions
 ## 03.10. Useful Properties of Common Functions
 ## 03.11. Bayes’ Rule
