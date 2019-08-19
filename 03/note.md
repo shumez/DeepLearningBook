@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-06-03 19:38:5
-Modified: 	2019-08-19 17:39:21
+Modified: 	2019-08-19 17:47:22
 -----
 Copyright (c) 2019 shumez
 -->
@@ -110,6 +110,24 @@ for continulous var
 
 
 ## 03.06. The Chain Rule of Conditional Probabilities
+
+joint prob dist may be decomposed into conditional dist
+
+\[ P(\mathrm{x}^{(1)}, \cdots \mathrm{x}^{(n)}) = P(\mathrm{x}^{(1)}) \prod_{i=2}^n{P(\mathrm{x}^{(i)} | \mathrm{x}^{(1)}, \cdots, \mathrm{x}^{(i-1)})} \tag{3.6} \]
+
+**chain rule** (**product rule**)
+
+e.g., 
+
+\[
+	\begin{align*}
+		P(a,b,c) &= P(a | b,c) P(b,c) \\
+		P(b,c) &= P(b | c) P(c) \\
+		P(a,b,c) &= P(a | b,c) P(b | c) P(c)
+	\end{align*}
+\]
+
+
 ## 03.07. Independence and Conditional Independence
 ## 03.08. Expectation, Variance and Covariance
 ## 03.09. Common Probability Distributions
