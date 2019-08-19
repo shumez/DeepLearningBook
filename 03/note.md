@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-06-03 19:38:5
-Modified: 	2019-08-19 17:47:22
+Modified: 	2019-08-19 18:04:59
 -----
 Copyright (c) 2019 shumez
 -->
@@ -129,6 +129,20 @@ e.g.,
 
 
 ## 03.07. Independence and Conditional Independence
+
+2 random vars \(\mathrm{x}\) and \(\mathrm{y}\) are **independent**
+
+\[\forall x \in \mathrm{x}, y \in \mathrm{y},\\ p(\mathrm{x}=x, \mathrm{y}=y) = p(\mathrm{x}=x) p(\mathrm{y}=y) \tag{3.7} \]
+
+\(\mathrm{x}\) and \(\mathrm{y}\) are **conditionally independent**
+
+\[\forall x \in \mathrm{x}, y \in \mathrm{y}, z \in \mathrm{z},\\ p(\mathrm{x}=x, \mathrm{y}=y | \mathrm{z}=z) = p(\mathrm{x}=x | \mathrm{z}=z) p(\mathrm{y}=y | \mathrm{z}=z) \tag{3.8} \]
+
+\(\mathrm{x} \perp \mathrm{y}\) means that independent
+
+\(\mathrm{x} \perp \mathrm{y} | \mathrm{z}\) means that \(\mathrm{x}\) and \(\mathrm{y}\) are conditionally independent \(\mathrm{z}\)
+
+
 ## 03.08. Expectation, Variance and Covariance
 ## 03.09. Common Probability Distributions
 ## 03.10. Useful Properties of Common Functions
