@@ -117,6 +117,16 @@
 
     <li class="toctree-l3"><a href="#0309_common_probability_distributions">03.09. Common Probability Distributions</a></li>
     
+        <ul>
+        
+            <li><a class="toctree-l4" href="#030901_bernouulli_distribution">03.09.01. Bernouulli Distribution</a></li>
+        
+            <li><a class="toctree-l4" href="#030902_multinoulli_distribution">03.09.02. Multinoulli Distribution</a></li>
+        
+            <li><a class="toctree-l4" href="#030903_gaussian_distribution">03.09.03. Gaussian Distribution</a></li>
+        
+        </ul>
+    
 
     <li class="toctree-l3"><a href="#0310_useful_properties_of_common_functions">03.10. Useful Properties of Common Functions</a></li>
     
@@ -209,7 +219,7 @@ Filename:   note.md
 Project:    /Users/shume/Developer/DeepLearningBook/03
 Author:     shumez <https://github.com/shumez>
 Created:    2019-06-03 19:38:5
-Modified:   2019-06-06 18:07:48
+Modified:   2019-08-20 14:42:21
 -----
 Copyright (c) 2019 shumez
 -->
@@ -230,7 +240,12 @@ Copyright (c) 2019 shumez
 <li><a href="#0306_the_chain_rule_of_conditional_probabilities">03.06. The Chain Rule of Conditional Probabilities</a></li>
 <li><a href="#0307_independence_and_conditional_independence">03.07. Independence and Conditional Independence</a></li>
 <li><a href="#0308_expectation_variance_and_covariance">03.08. Expectation, Variance and Covariance</a></li>
-<li><a href="#0309_common_probability_distributions">03.09. Common Probability Distributions</a></li>
+<li><a href="#0309_common_probability_distributions">03.09. Common Probability Distributions</a><ul>
+<li><a href="#030901_bernouulli_distribution">03.09.01. Bernouulli Distribution</a></li>
+<li><a href="#030902_multinoulli_distribution">03.09.02. Multinoulli Distribution</a></li>
+<li><a href="#030903_gaussian_distribution">03.09.03. Gaussian Distribution</a></li>
+</ul>
+</li>
 <li><a href="#0310_useful_properties_of_common_functions">03.10. Useful Properties of Common Functions</a></li>
 <li><a href="#0311_bayes_rule">03.11. Bayes’ Rule</a></li>
 <li><a href="#0312_technical_details_of_continuous_variables">03.12. Technical Details of Continuous Variables</a></li>
@@ -283,11 +298,117 @@ Copyright (c) 2019 shumez
 </li>
 </ul>
 <h2 id="0304_marginal_probability">03.04. Marginal Probability<a class="headerlink" href="#0304_marginal_probability" title="Permanent link">&para;</a></h2>
+<p><strong>marginal probability</strong> distribution</p>
+<p><strong>sum rule</strong></p>
+<p>for discrete rand var </p>
+<p>
+<script type="math/tex; mode=display"> \forall x \in \mathrm{x}, P(\mathrm{x}=x) = \sum_y{P(\mathrm{x}=x, \mathrm{y}=y)} \tag{3.3} </script>
+</p>
+<p>for continulous var</p>
+<p>
+<script type="math/tex; mode=display">p(x) = \int{p(x,y)dy} \tag{3.4}</script>
+</p>
 <h2 id="0305_conditional_probability">03.05. Conditional Probability<a class="headerlink" href="#0305_conditional_probability" title="Permanent link">&para;</a></h2>
+<p><strong>conditional probability</strong></p>
+<p>
+<script type="math/tex; mode=display"> P(\mathrm{y}=y | \mathrm{x}=x) = \frac{P(\mathrm{y}=y, \mathrm{x}=x)}{P(\mathrm{x}=x)} \tag{3.5} </script>
+</p>
+<p><strong>intervention query</strong>: domain of <strong>causal modeling</strong></p>
 <h2 id="0306_the_chain_rule_of_conditional_probabilities">03.06. The Chain Rule of Conditional Probabilities<a class="headerlink" href="#0306_the_chain_rule_of_conditional_probabilities" title="Permanent link">&para;</a></h2>
+<p>joint prob dist may be decomposed into conditional dist</p>
+<p>
+<script type="math/tex; mode=display"> P(\mathrm{x}^{(1)}, \cdots \mathrm{x}^{(n)}) = P(\mathrm{x}^{(1)}) \prod_{i=2}^n{P(\mathrm{x}^{(i)} | \mathrm{x}^{(1)}, \cdots, \mathrm{x}^{(i-1)})} \tag{3.6} </script>
+</p>
+<p><strong>chain rule</strong> (<strong>product rule</strong>)</p>
+<p>e.g., </p>
+<p>
+<script type="math/tex; mode=display">
+    \begin{align*}
+        P(a,b,c) &= P(a | b,c) P(b,c) \\
+        P(b,c) &= P(b | c) P(c) \\
+        P(a,b,c) &= P(a | b,c) P(b | c) P(c)
+    \end{align*}
+</script>
+</p>
 <h2 id="0307_independence_and_conditional_independence">03.07. Independence and Conditional Independence<a class="headerlink" href="#0307_independence_and_conditional_independence" title="Permanent link">&para;</a></h2>
+<p>2 random vars <script type="math/tex">\mathrm{x}</script> and <script type="math/tex">\mathrm{y}</script> are <strong>independent</strong></p>
+<p>
+<script type="math/tex; mode=display">\forall x \in \mathrm{x}, y \in \mathrm{y},\\ p(\mathrm{x}=x, \mathrm{y}=y) = p(\mathrm{x}=x) p(\mathrm{y}=y) \tag{3.7} </script>
+</p>
+<p>
+<script type="math/tex">\mathrm{x}</script> and <script type="math/tex">\mathrm{y}</script> are <strong>conditionally independent</strong></p>
+<p>
+<script type="math/tex; mode=display">\forall x \in \mathrm{x}, y \in \mathrm{y}, z \in \mathrm{z},\\ p(\mathrm{x}=x, \mathrm{y}=y | \mathrm{z}=z) = p(\mathrm{x}=x | \mathrm{z}=z) p(\mathrm{y}=y | \mathrm{z}=z) \tag{3.8} </script>
+</p>
+<p>
+<script type="math/tex">\mathrm{x} \perp \mathrm{y}</script> means that independent</p>
+<p>
+<script type="math/tex">\mathrm{x} \perp \mathrm{y} | \mathrm{z}</script> means that <script type="math/tex">\mathrm{x}</script> and <script type="math/tex">\mathrm{y}</script> are conditionally independent <script type="math/tex">\mathrm{z}</script>
+</p>
 <h2 id="0308_expectation_variance_and_covariance">03.08. Expectation, Variance and Covariance<a class="headerlink" href="#0308_expectation_variance_and_covariance" title="Permanent link">&para;</a></h2>
+<p><strong>expectation</strong> (<strong>expected value</strong>) of some fn <script type="math/tex">f(x)</script> w respect to a prob dist <script type="math/tex">P(x)</script>
+</p>
+<p>for discrete var </p>
+<p>
+<script type="math/tex; mode=display"> \mathbb{E}_{\mathrm{x} \sim P} [f(x)] = \sum_x{P(x) f(x)} \tag{3.9} </script>
+</p>
+<p>for continuous vars</p>
+<p>
+<script type="math/tex; mode=display"> \mathbb{E}_{\mathrm{x} \sim p} [f(x)] = \int{p(x) f(x) dx} \tag{3.10} </script>
+</p>
+<p>expectation are linear </p>
+<p>
+<script type="math/tex; mode=display"> \mathbb{E}_{\mathrm{x}} [\alpha f(x) + \beta g(x)] = \alpha \mathbb{E}_{\mathrm{x}} [f(x)] + \beta \mathbb{E}_{\mathrm{x}} [g(x)] \tag{3.11} </script>
+</p>
+<p>when <script type="math/tex">\alpha</script> and <script type="math/tex">\beta</script> NOT dependent on <script type="math/tex">x</script>
+</p>
+<p><strong>variance</strong></p>
+<p>
+<script type="math/tex; mode=display"> \text{Var} \big( f(x) \big) = \mathbb{E} \Bigg[ \bigg(f(x) - \mathbb{E} \Big[ f(x) \Big] \bigg)^2 \Bigg] \tag{3.12} </script>
+</p>
+<p><strong>standard deviation</strong></p>
+<p><strong>covariance</strong></p>
+<p>
+<script type="math/tex; mode=display"> \text{Cov} \big( f(x), g(y) \big) = \mathbb{E} \Bigg[ \bigg( f(x) - \mathbb{E} \Big[ f(x) \Big] \bigg) \bigg( g(y) - \mathbb{E} \Big[ g(y) \Big] \bigg) \Bigg] \tag{3.13} </script>
+</p>
+<p><strong>covariance matrix</strong></p>
+<p>
+<script type="math/tex; mode=display"> \text{Cov}(\mathrm{x}_{i,j}) = \text{Cov} (\mathrm{x}_i, \mathrm{x}_j) \tag{3.14} </script>
+</p>
+<p>
+<script type="math/tex; mode=display"> \text{Cov} (\mathrm{x}_i, \mathrm{x}_i) = \text{Var}(\mathrm{x}_i) \tag{3.15} </script>
+</p>
 <h2 id="0309_common_probability_distributions">03.09. Common Probability Distributions<a class="headerlink" href="#0309_common_probability_distributions" title="Permanent link">&para;</a></h2>
+<h3 id="030901_bernouulli_distribution">03.09.01. Bernouulli Distribution<a class="headerlink" href="#030901_bernouulli_distribution" title="Permanent link">&para;</a></h3>
+<p><strong>Bernoulli</strong> dist</p>
+<p>
+<script type="math/tex; mode=display">
+    \begin{align*} 
+        P(\mathrm{x}=1) &= \phi \tag{3.16} \\
+        P(\mathrm{x}=0) &= 1- \phi \tag{3.17} \\
+        P(\mathrm{x}=x) &= \phi^x (1 - \phi)^{1-x} \tag{3.18} \\
+        \mathbb{E}_{\mathrm{x}} &= \phi \tag{3.19} \\
+        \text{Var}_{\mathrm{x}}(\mathrm{x}) &= \phi(1 - \phi) \tag{3.20} 
+    \end{align*} 
+</script>
+</p>
+<h3 id="030902_multinoulli_distribution">03.09.02. Multinoulli Distribution<a class="headerlink" href="#030902_multinoulli_distribution" title="Permanent link">&para;</a></h3>
+<p><strong>multinoulli</strong> (<strong>categorical</strong>) dist</p>
+<p>single discrete var w <script type="math/tex">k</script> diff states</p>
+<p>vector <script type="math/tex">p\in[0,1]^{k-1}</script>
+</p>
+<h3 id="030903_gaussian_distribution">03.09.03. Gaussian Distribution<a class="headerlink" href="#030903_gaussian_distribution" title="Permanent link">&para;</a></h3>
+<p><strong>normal distribution</strong> (aka, <strong>Gaussian distribution</strong>)</p>
+<p>
+<script type="math/tex; mode=display"> \mathcal{N} (x; \mu, \sigma^2) = \sqrt{\frac{1}{2\pi\sigma^2}} \exp{\Big( - \frac{1}{2\sigma^2} (x - \mu)^2 \Big)} \tag{3.21} </script>
+</p>
+<p>
+<script type="math/tex">\mu \in \mathbb{R}</script>, <script type="math/tex">\sigma \in (0, \infty)</script>
+</p>
+<p>
+<script type="math/tex; mode=display"> \mathcal{N} (x; \mu, \beta^{-1}) = \sqrt{\frac{\beta}{2\pi}} \exp{\Big( - \frac{1}{2} \beta (x - \mu)^2 \Big)} \tag{3.22} </script>
+</p>
+<p><strong>central limit theorem</strong></p>
 <h2 id="0310_useful_properties_of_common_functions">03.10. Useful Properties of Common Functions<a class="headerlink" href="#0310_useful_properties_of_common_functions" title="Permanent link">&para;</a></h2>
 <h2 id="0311_bayes_rule">03.11. Bayes’ Rule<a class="headerlink" href="#0311_bayes_rule" title="Permanent link">&para;</a></h2>
 <h2 id="0312_technical_details_of_continuous_variables">03.12. Technical Details of Continuous Variables<a class="headerlink" href="#0312_technical_details_of_continuous_variables" title="Permanent link">&para;</a></h2>
