@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-06-03 19:38:5
-Modified: 	2019-08-20 14:40:25
+Modified: 	2019-08-20 14:42:21
 -----
 Copyright (c) 2019 shumez
 -->
@@ -188,11 +188,15 @@ when \(\alpha\) and \(\beta\) NOT dependent on \(x\)
 
 **Bernoulli** dist
 
-\[ P(\mathrm{x}=1) = \phi \tag{3.16} \]
-\[ P(\mathrm{x}=0) = 1- \phi \tag{3.17} \]
-\[ P(\mathrm{x}=x) = \phi^x (1 - \phi)^{1-x} \tag{3.18} \]
-\[ \mathbb{E}_{\mathrm{x}} = \phi \tag{3.19} \]
-\[ \text{Var}_{\mathrm{x}}(\mathrm{x}) = \phi(1 - \phi) \tag{3.20} \]
+\[
+	\begin{align*} 
+		P(\mathrm{x}=1) &= \phi \tag{3.16} \\
+		P(\mathrm{x}=0) &= 1- \phi \tag{3.17} \\
+		P(\mathrm{x}=x) &= \phi^x (1 - \phi)^{1-x} \tag{3.18} \\
+		\mathbb{E}_{\mathrm{x}} &= \phi \tag{3.19} \\
+		\text{Var}_{\mathrm{x}}(\mathrm{x}) &= \phi(1 - \phi) \tag{3.20} 
+	\end{align*} 
+\]
 
 
 ### 03.09.02. Multinoulli Distribution
