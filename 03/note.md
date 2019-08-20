@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-06-03 19:38:5
-Modified: 	2019-08-20 14:26:48
+Modified: 	2019-08-20 14:40:25
 -----
 Copyright (c) 2019 shumez
 -->
@@ -26,6 +26,7 @@ Copyright (c) 2019 shumez
 - [03.09. Common Probability Distributions][0309]
 	- [03.09.01. Bernouulli Distribution][030901]
 	- [03.09.02. Multinoulli Distribution][030902]
+	- [03.09.03. Gaussian Distribution][030903]
 - [03.10. Useful Properties of Common Functions][0310]
 - [03.11. Bayes’ Rule][0311]
 - [03.12. Technical Details of Continuous Variables][0312]
@@ -203,6 +204,20 @@ single discrete var w \(k\) diff states
 vector \(p\in[0,1]^{k-1}\)
 
 
+### 03.09.03. Gaussian Distribution
+
+**normal distribution** (aka, **Gaussian distribution**)
+
+\[ \mathcal{N} (x; \mu, \sigma^2) = \sqrt{\frac{1}{2\pi\sigma^2}} \exp{\Big( - \frac{1}{2\sigma^2} (x - \mu)^2 \Big)} \tag{3.21} \]
+
+\(\mu \in \mathbb{R}\), \(\sigma \in (0, \infty)\)
+
+\[ \mathcal{N} (x; \mu, \beta^{-1}) = \sqrt{\frac{\beta}{2\pi}} \exp{\Big( - \frac{1}{2} \beta (x - \mu)^2 \Big)} \tag{3.22} \]
+
+**central limit theorem**
+
+
+
 ## 03.10. Useful Properties of Common Functions
 ## 03.11. Bayes’ Rule
 ## 03.12. Technical Details of Continuous Variables
@@ -228,6 +243,9 @@ vector \(p\in[0,1]^{k-1}\)
 [0307]: #0307_independence_and_conditional_independence
 [0308]: #0308_expectation_variance_and_covariance
 [0309]: #0309_common_probability_distributions
+[030901]: #030901_bernouulli_distribution
+[030902]: #030902_multinoulli_distribution
+[030903]: #030903_gaussian_distribution
 [0310]: #0310_useful_properties_of_common_functions
 [0311]: #0311_bayes_rule
 [0312]: #0312_technical_details_of_continuous_variables
