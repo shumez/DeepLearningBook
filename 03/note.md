@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/DeepLearningBook/03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-06-03 19:38:5
-Modified: 	2019-08-20 14:24:31
+Modified: 	2019-08-20 14:26:48
 -----
 Copyright (c) 2019 shumez
 -->
@@ -12,23 +12,25 @@ Copyright (c) 2019 shumez
 
 ## Contents
 
-* [03.00.][0300]
-* [03.01. Why Probability?][0301]
-* [03.02. Random Variables][0302]
-* [03.03. Probability Distributions][0303]
-	* [03.03.01. Disctrete Variables and Probability Mass Functions][030301]
-	* [03.03.02. Continuous Variables and Probability Density Functions][030302]
-* [03.04. Marginal Probability][0304]
-* [03.05. Conditional Probability][0305]
-* [03.06. The Chain Rule of Conditional Probabilities][0306]
-* [03.07. Independence and Conditional Independence][0307]
-* [03.08. Expectation, Variance and Covariance][0308]
-* [03.09. Common Probability Distributions][0309]
-* [03.10. Useful Properties of Common Functions][0310]
-* [03.11. Bayes’ Rule][0311]
-* [03.12. Technical Details of Continuous Variables][0312]
-* [03.13. Information Theory][0313]
-* [03.14. Structured Probabilistic Models][0314]
+- [03.00.][0300]
+- [03.01. Why Probability?][0301]
+- [03.02. Random Variables][0302]
+- [03.03. Probability Distributions][0303]
+	- [03.03.01. Disctrete Variables and Probability Mass Functions][030301]
+	- [03.03.02. Continuous Variables and Probability Density Functions][030302]
+- [03.04. Marginal Probability][0304]
+- [03.05. Conditional Probability][0305]
+- [03.06. The Chain Rule of Conditional Probabilities][0306]
+- [03.07. Independence and Conditional Independence][0307]
+- [03.08. Expectation, Variance and Covariance][0308]
+- [03.09. Common Probability Distributions][0309]
+	- [03.09.01. Bernouulli Distribution][030901]
+	- [03.09.02. Multinoulli Distribution][030902]
+- [03.10. Useful Properties of Common Functions][0310]
+- [03.11. Bayes’ Rule][0311]
+- [03.12. Technical Details of Continuous Variables][0312]
+- [03.13. Information Theory][0313]
+- [03.14. Structured Probabilistic Models][0314]
 
 
 ## 03.00.
